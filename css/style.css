@@ -51,7 +51,97 @@
     margin-left: 28px;
 }
 /********************** start hero section style ********************/
-.hero .imgContainer img{
-    width: 690px;
-    height: 802.55px;
+.textContainer{
+    margin-left: 50px;
 }
+.textContainer .rate p{
+    color: #B479D9;
+    font-weight: bold;
+    padding: 5px 20px ;
+    border-radius: 40px;
+    background-color: #F4EEFA;
+    letter-spacing: 1px;
+    line-height: 21px;
+}
+.textContainer .rate .star{
+    margin-left: 6px;
+}
+.textContainer .rate .star i{
+    color: #F3BB2E;
+}
+.textContainer h4{
+    font-size: 48px;
+    font-weight: bold;
+    line-height: 60px;
+    letter-spacing: 0%;
+}
+.textContainer p{
+    color: #7E7E7E;
+    line-height: 32.4px;
+    font-size: 18px;
+    font-size: medium;
+}
+.textContainer .text i{
+    color: #11B196;
+    font-size: 20px;
+    background-color: #E2F5F2;
+    padding: 3px 10px 3px 2px;
+    border-radius: 16px;
+    width: 32px;
+    height: 32px;
+}
+.textContainer .text p{
+    color: black;
+    line-height: 32.4px;
+    font-size: 18px;
+    font-size: medium;
+    margin-left: 10px;
+    
+}
+.textContainer .btn button{
+    background-color: #2EBB77;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    margin-right: 20px;
+    padding: 14px 24px;
+    font-weight: bold;
+}
+.textContainer .btn p{
+    color: black;
+    font-weight: bold;
+}
+.textContainer .btn p i{
+    border: 2px solid black;
+    border-radius: 15px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+}
+/********************** start feature section style ********************/
+.feature{
+    height: 300px;
+}
+.feature-text {
+    text-align: center;
+}
+.feature-text h3{
+    /* font-size: 40px; */
+    font-weight: bold;
+    line-height: 46px;
+}
+.feature-text p{
+    color: #7E7E7E;   
+}
+.feature p{
+    text-align: center;
+    font-weight: bold;
+    line-height: 32px;
+}
+.feature p sup{
+    color: #7E7E7E;
+
+}
+
+
+
