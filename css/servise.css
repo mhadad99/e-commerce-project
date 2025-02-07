@@ -1,0 +1,369 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/********************** start header style ********************/
+.header{
+    background-color: #F4EEFA;
+    height: 57px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header p{
+    font-size: 15px;
+    color: #B479D9;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 1px;
+    line-height: 21px;
+}
+.header i{
+    position: absolute;
+    right: 18px;
+}
+/********************** start navbar style ********************/
+.navbar{
+    height: 99px;
+    padding: 15px 30px ;
+}
+.navbar .menu .active{
+    color: #2EBB77;
+}
+.navbar .menu li{
+    list-style: none;
+    padding-left: 28px;
+}
+.navbar .menu .fristli{
+    padding-left: 0;
+}
+.navbar .menu li a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+.navbar .icons a{
+    color: black;
+    padding-left: 28px;
+}
+.navbar .icons sup{
+    color: white;
+    background-color: #2EBB77;
+    border-radius: 50%;
+    padding: 3px 5px;
+}
+.navbar .icons button{
+    border:1px solid #EEEEEE;
+    background-color: white;
+    padding: 8px 25px;
+    border-radius: 12px;
+    font-weight: bold;
+    margin-left: 28px;
+}
+/********************** start service style ********************/
+
+.service{
+    height: 223px;
+}
+.service h1{
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 56px;
+}
+.service p{
+    color: #7E7E7E;
+    line-height: 27px;
+    font-size: 20px;
+}
+.service h5{
+    font-size: 20px;
+}
+.text p, .text h5 {
+    margin: 0;
+    padding: 0 10px;
+  }
+.line {
+    width: 30px;
+    height: 2px;
+    background-color: #7E7E7E;
+}
+/***************** start element section style *****************/
+.element{
+    height: 325.78px;
+    position: relative;
+}
+.element-content{
+    display: flex ;
+    position: absolute;
+    top: 35%;
+    /* justify-content: center;
+    align-items: center; */
+}
+.element-content h6{
+    font-weight: bold;
+}
+.element-content p{
+    color: #7E7E7E;
+    font-size: 15px;
+    font-weight: bold;
+}
+.element-text h3{
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 52px;
+}
+.element-text p{
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 19.6px;
+    letter-spacing: 1px;
+}
+/***************** start cards section style *****************/
+.card1 {
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+    margin-right: 30px;
+    border-radius: 12px;
+    padding: 13px 18px;
+}
+.card2 {
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+    margin-right: 30px;
+    border-radius: 12px;
+    padding: 13px 18px;
+}
+.card3 {
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+    margin-right: 30px;
+    border-radius: 12px;
+    padding: 13px 18px;
+}
+.cards p{
+    color: #7E7E7E;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 27px;
+}
+.cards h5{
+    background-color: #F5F5F5;
+    border-radius: 12px;
+    padding: 15px 18px;
+}
+.card-text p:nth-child(1){
+    border-radius: 40px;
+    color: #B479D9;
+    background-color: #F4EEFA;
+    padding: 8px 25px;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 25.2px;
+}
+.card-text h3{
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 52px;
+}
+.card-text{
+    position: relative;
+}
+.card-text p a{
+    text-decoration: none;
+    background-color: #9B9B9B;
+    border-radius: 3px;
+    padding: 7px 16px;
+    font-size: 18px;
+    color: white;
+    position: absolute;
+    right: -510px;
+    bottom: -40px;
+}
+/***************** start graphic section style *****************/
+.graphic .text-container h4:nth-child(1){
+    color: white;
+    line-height: 28px;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #2EBB77;
+    border-radius: 12px;
+    padding: 25px 15px;
+    margin-bottom: 28px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+}
+.graphic .text-container p{
+    color: #7E7E7E;
+    line-height: 28.8px;
+    font-size: 16px;
+    font-weight: bold;
+}
+.graphic .text-container h4:nth-child(3){
+    line-height: 28px;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: white;
+    border-radius: 12px;
+    padding: 25px 15px;
+    margin-bottom: 33px;
+    margin-top: 33px;
+}
+.graphic .text-container h4:nth-child(4){
+    line-height: 28px;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: white;
+    border-radius: 12px;
+    padding: 25px 15px;
+    margin-bottom: 33px;
+    margin-top: 33px;
+}
+.graphic .text-container h4:nth-child(5){
+    line-height: 28px;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: white;
+    border-radius: 12px;
+    padding: 25px 15px;
+    margin-bottom: 33px;
+    margin-top: 33px;
+}
+/***************** start banner section style *****************/
+.banner-text h3{
+    font-size: 40px; 
+    font-weight: bold;
+    line-height: 46px;
+}
+.banner-text p{
+    color: #7E7E7E;   
+    line-height: 32px;
+}
+.img1 , .img2 , .img3 , .img4{
+    position: relative;
+}
+.banner{
+    margin-bottom: 80px;
+}
+.banner h4{
+    color: white;
+    position: absolute;
+    bottom: 20px;
+    left: 25px;
+}
+
+/***************** start large-service section style *****************/
+.inner-large-service{
+    margin-top: 180px;
+}
+.inner-large-service .text h3{
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 52px;
+}
+.inner-large-service .text p{
+    font-size: 18px;
+    color: #7E7E7E;
+    margin-top: 15px;
+    font-weight: bold;
+    line-height: 32.4px;
+    margin-top: 12px;
+}
+.inner-large-service .text button{
+    margin-top: 16px;
+    background-color: #2EBB77;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    margin-right: 20px;
+    padding: 14px 24px;
+    font-weight: bold;
+}
+.card-row3{
+    position: relative;
+}
+.card-row3 .text{
+    position: absolute;
+    top: 10px;
+    left: 30px;
+}
+.card-row3  img{
+    border-radius: 12px;
+    width: 1000px;
+}
+/********************* start footer section style ****************/
+footer {
+    padding: 50px 0;
+}
+
+footer h5 {
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+footer ul {
+    padding: 0;
+    list-style: none;
+}
+footer p{
+    color: #7E7E7E ;
+}
+footer ul li {
+    margin-bottom: 15px;
+}
+
+footer ul li a {
+    color: #7E7E7E;
+    text-decoration: none;
+    display: block;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+footer ul li a:hover {
+    color: #2EBB77;
+}
+.newsletter input {
+    border-radius: 5px;
+    border: none;
+    padding: 14px 10px;
+    background-color: #F5F5F5;
+    border-radius: 12px;
+    color: #9B9B9B;
+    font-weight: bold;
+}
+.newsletter button {
+    margin-top: 20px;
+    background-color: #2EBB77;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 14px 80px;
+    font-weight: bold;
+}
+.social-icons img {
+    width: 24px;
+    margin-right: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+.social-icons img:hover {
+    transform: scale(1.2);
+}
+
+.payment-icons img {
+    width: 480px;
+    height: 62px;
+}
+
+.footer-bottom {
+    border-top: 1px solid #ddd;
+    padding-top: 15px;
+    margin-top: 80px;
+}
+.contain-footer{
+    margin-top: 60px;
+}
+.contain-footer p{
+    font-size: 18px;
+    line-height: 22.4px;
+}
+.social-icons a i{
+    color: #9B9B9B;
+    font-size: 24px;
+}
+
