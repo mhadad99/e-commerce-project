@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Our Team</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+   
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+      .team-section {
+        padding: 60px 0;
+      }
+      .team-title {
+        font-size: 28px;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 10px;
+      }
+      .team-subtitle {
+        text-align: center;
+        color: gray;
+        margin-bottom: 40px;
+      }
+      .team-member {
+        text-align: center;
+      }
+      .team-member img {
+        width: 120px;
+        height: 120px;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 3px solid #ddd;
+        margin-bottom: 10px;
+      }
+      .team-member h5 {
+        margin: 5px 0;
+        font-size: 18px;
+        font-weight: bold;
+      }
+      .team-member p {
+        margin: 0;
+        font-size: 14px;
+        color: gray;
+      }
+
+      /* Card Layout */
+      .team-card {
+        border-radius: 10px;
+        padding: 15px;
+        text-align: center;
+        background: #fff;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+      }
+      .team-card img {
+        width: 100%;
+        border-radius: 10px;
+        object-fit: cover;
+      }
+      .team-card h5 {
+        margin-top: 10px;
+        font-size: 18px;
+        font-weight: bold;
+      }
+      .team-card p {
+        font-size: 14px;
+        color: gray;
+      }
+      .hero-section {
+        background-color: #f8f0ff;
+        padding: 100px 0;
+        position: relative;
+        overflow: hidden;
+      }
+      .floating-image {
+        position: absolute;
+        border-radius: 20px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      }
+      .img-1 {
+        top: 10%;
+        left: 5%;
+        max-width: 200px;
+      }
+      .img-2 {
+        bottom: 15%;
+        left: 15%;
+        max-width: 180px;
+      }
+      .img-3 {
+        top: 20%;
+        right: 15%;
+        max-width: 160px;
+      }
+      .img-4 {
+        bottom: 25%;
+        right: 5%;
+        max-width: 200px;
+      }
+      .img-5 {
+        top: 5%;
+        right: 25%;
+        max-width: 150px;
+      }
+
+      .btn-shop {
+        background-color: #27c499;
+        color: white;
+        padding: 12px 24px;
+        border-radius: 8px;
+        text-decoration: none;
+        transition: all 0.3s ease;
+      }
+      .btn-shop:hover {
+        background-color: #229e7a;
+        color: white;
+      }
+      .btn-contact {
+        color: #333;
+        padding: 12px 24px;
+        text-decoration: none;
+      }
+      .social-links {
+        display: flex;
+        gap: 2rem;
+        margin-bottom: 3rem;
+      }
+      .social-link {
+        color: #333;
+        text-decoration: none;
+        font-weight: 500;
+      }
+      .footer-links h5 {
+        font-weight: 600;
+        margin-bottom: 1.5rem;
+      }
+      .footer-links ul {
+        list-style: none;
+        padding: 0;
+      }
+      .footer-links li {
+        margin-bottom: 0.75rem;
+      }
+      .footer-links a {
+        color: #666;
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+      .footer-links a:hover {
+        color: #27c499;
+      }
+      .payment-methods img {
+        height: 24px;
+        margin-right: 10px;
+      }
+      .social-icons a {
+        color: #666;
+        margin-left: 1.5rem;
+        text-decoration: none;
+      }
+      .top-banner {
+        background-color: #fdf4ff;
+        padding: 8px;
+        text-align: center;
+        font-size: 14px;
+      }
+      .navbar {
+        padding: 20px 0;
+      }
+      .navbar-brand {
+        font-size: 20px;
+        font-weight: 500;
+      }
+      .nav-link {
+        color: #333;
+        padding: 8px 16px !important;
+      }
+      .header-section {
+        background-color: #fdf4ff;
+        padding: 60px 0;
+        text-align: center;
+      }
+      .breadcrumb {
+        justify-content: center;
+        margin-top: 10px;
+      }
+      .breadcrumb-item + .breadcrumb-item::before {
+        content: "•";
+      }
+      .breadcrumb-item a {
+        color: #666;
+        text-decoration: none;
+      }
+      .team-section {
+        padding: 80px 0;
+      }
+      .team-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 30px;
+        margin-top: 50px;
+      }
+      .team-member {
+        text-align: center;
+      }
+      .team-member img {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 20px;
+      }
+      .team-member h5 {
+        margin-bottom: 5px;
+        font-weight: 500;
+      }
+      .team-member p {
+        color: #666;
+        font-size: 14px;
+        margin: 0;
+      }
+      .scroll-top {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        width: 40px;
+        height: 40px;
+        background: #fff;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        text-decoration: none;
+        color: #333;
+      }
+   
+    </style>
+  </head>
+  <body>
+    <body>
+      <!-- Top Banner -->
+      <div class="top-banner">
+        FREE SHIPPING ON ALL U.S. ORDERS $60+
+        <button
+          type="button"
+          class="btn-close float-end me-3"
+          aria-label="Close"
+        ></button>
+      </div>
+
+
+ <nav class="navbar navbar-expand-lg navbar-light bg-white">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse justify-content-start" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">TeeSpace</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Option 1</a></li>
+                            <li><a class="dropdown-item" href="#">Option 2</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Shop</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Shop 1</a></li>
+                            <li><a class="dropdown-item" href="#">Shop 2</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <a class="navbar-brand mx-auto" href="#">
+                <img src="/images/logo-home2.png" alt="TeeSpace" height="40">
+            </a>
+
+            <div class="d-flex align-items-center">
+                <div class="nav-icons me-3">
+                    <a href="#" class="text-dark me-2"><i class="bi bi-search"></i></a>
+                    <a href="#" class="text-dark me-2"><i class="bi bi-person"></i></a>
+                    <a href="#" class="text-dark position-relative me-2">
+                        <i class="bi bi-cart"></i>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">2</span>
+                    </a>
+                </div>
+                <button class="btn btn-outline-dark">Let's Talk</button>
+            </div>
+        </div>
+    </nav>
+
+      <!-- Header Section -->
+      <header class="header-section bg-body-secondary">
+        <div class="container">
+          <h1 class="display-5 fw-bold">Our Team</h1>
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item active">Our Team</li>
+            </ol>
+          </nav>
+        </div>
+      </header>
+
+      <!-- Team Section -->
+
+      <section class="team-section">
+        <div class="container">
+          <div class="text-center">
+            <h2 class="display-6 fw-bold mb-3">Meet the TeeSpace team</h2>
+            <p class="text-muted">
+              Let us show you how your products come to life
+            </p>
+          </div>
+
+          <div class="team-grid">
+            <div class="team-member">
+              <img
+                src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop"
+                alt="Ariane McCoy"
+              />
+              <h5>Ariane McCoy</h5>
+              <p>President of Sales</p>
+            </div>
+            <div class="team-member">
+              <img
+                src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop"
+                alt="Jane Cooper"
+              />
+              <h5>Jane Cooper</h5>
+              <p>Web Designer</p>
+            </div>
+            <div class="team-member">
+              <img
+                src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop"
+                alt="Floyd Miles"
+              />
+              <h5>Floyd Miles</h5>
+              <p>Marketing</p>
+            </div>
+            <div class="team-member">
+              <img
+                src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop"
+                alt="Jacob Jones"
+              />
+              <h5>Jacob Jones</h5>
+              <p>Project Manager</p>
+            </div>
+            <div class="team-member">
+              <img
+                src="https://images.unsplash.com/photo-1519345182560-3f2917c472ef?w=400&h=400&fit=crop"
+                alt="Ronald Richards"
+              />
+              <h5>Ronald Richards</h5>
+              <p>Artist</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="">
+        <div class="container my-0">
+        
+    <div class="team-grid">
+            <div class="team-member">
+              <img
+                src="/images/img2.png"
+                alt="Ariane McCoy"
+              />
+              <h5>Ariane McCoy</h5>
+              <p>President of Sales</p>
+            </div>
+            <div class="team-member">
+              <img
+                src="/images/team-about-4.jpg.png"
+                alt="Jane Cooper"
+              />
+              <h5>Jane Cooper</h5>
+              <p>Web Designer</p>
+            </div>
+            <div class="team-member">
+              <img
+                src="/images/team-about-1.jpg.png"
+                alt="Floyd Miles"
+              />
+              <h5>Floyd Miles</h5>
+              <p>Marketing</p>
+            </div>
+            <div class="team-member">
+              <img
+                src="/images/team-about-3.jpg.png"
+                alt="Jacob Jones"
+              />
+              <h5>Jacob Jones</h5>
+              <p>Project Manager</p>
+            </div>
+            <div class="team-member">
+              <img
+                src="/images/team-about-4.jpg.png"
+                alt="Ronald Richards"
+              />
+              <h5>Ronald Richards</h5>
+              <p>Artist</p>
+            </div>
+          </div>
+        </div>
+      </section>
+  <section class="team-section container bg-light">
+      <h2 class="team-title">Meet the TeeSpace Team</h2>
+      <div class="row gy-4">
+        <div class="col-md-3 col-6">
+          <div class="team-card">
+            <img src="/images/team-about-3.jpg.png" alt="Arlene McCoy" />
+            <h5>Arlene McCoy</h5>
+            <p>President of Sales</p>
+          </div>
+        </div>
+        <div class="col-md-3 col-6">
+          <div class="team-card">
+            <img src="/images/team-about-1.jpg.png" alt="Mary Lou" />
+            <h5>Mary Lou</h5>
+            <p>Copy Writer</p>
+          </div>
+        </div>
+        <div class="col-md-3 col-6">
+          <div class="team-card">
+            <img src="/images/team-about-3.jpg.png" alt="Marlin" />
+            <h5>Marlin</h5>
+            <p>Designer</p>
+          </div>
+        </div>
+        <div class="col-md-3 col-6">
+          <div class="team-card">
+            <img src="/images/team-about-1.jpg.png" alt="Cristina" />
+            <h5>Cristina</h5>
+            <p>Director</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <img
+        src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=400&h=400&fit=crop"
+        alt="T-shirt model"
+        class="floating-image img-1"
+      />
+      <img
+        src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=400&h=400&fit=crop"
+        alt="T-shirt design"
+        class="floating-image img-2"
+      />
+      <img
+        src="https://images.unsplash.com/photo-1503342394128-c104d54dba01?w=400&h=400&fit=crop"
+        alt="Fashion photo"
+        class="floating-image img-3"
+      />
+      <img
+        src="https://images.unsplash.com/photo-1503342250614-ca440786f637?w=400&h=400&fit=crop"
+        alt="Style photo"
+        class="floating-image img-4"
+      />
+      <img
+        src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=400&h=400&fit=crop"
+        alt="Fashion model"
+        class="floating-image img-5"
+      />
+
+      <div class="container text-center position-relative">
+        <h1 class="display-4 fw-bold mb-4">
+          Enjoy up your vacations<br />in the best T-shirts
+        </h1>
+        <p class="text-muted mb-5">T-shirts that keep you moving.</p>
+        <div class="d-flex justify-content-center gap-3">
+          <a href="#" class="btn-shop">Shop Now →</a>
+          <a href="#" class="btn-contact">Contact Us →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Social Links -->
+    <div class="container  py-5">
+      <div class="flex-wrap social-links justify-content-center">
+        <a href="#" class="social-link">Facebook</a>
+        <a href="#" class="social-link">Twitter</a>
+        <a href="#" class="social-link">Instagram</a>
+        <a href="#" class="social-link">Youtube</a>
+        <a href="#" class="social-link">Pinterest</a>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-white py-5">
+      <div class="container">
+        <div class="row g-4">
+          <!-- Company Info -->
+          <div class="col-lg-3 col-md-6">
+            <div class="mb-4">
+              <h5 class="mb-3"><img src="/images/logo-home2.png" alt=""></h5>
+              <p class="text-muted mb-2">hello@teespace.io</p>
+              <p class="text-muted mb-2">+02 036 038 3996</p>
+              <p class="text-muted">
+                3645 Paseo Place, Suite 0960<br />San Diego
+              </p>
+            </div>
+          </div>
+
+          <!-- Information -->
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-links">
+              <h5>Information</h5>
+              <ul>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Our Blog</a></li>
+                <li><a href="#">Start a Return</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Shipping FAQ</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Services -->
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-links">
+              <h5>Services</h5>
+              <ul>
+                <li><a href="#">Printing Services</a></li>
+                <li><a href="#">Digital Scanning</a></li>
+                <li><a href="#">Design Services</a></li>
+                <li><a href="#">Copying Services</a></li>
+                <li><a href="#">Print on Demand</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Newsletter -->
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-links">
+              <h5>Newsletter</h5>
+              <p class="text-muted mb-3">Subscribe to our newsletter:</p>
+              <div class="mb-3">
+                <input
+                  type="email"
+                  class="form-control"
+                  placeholder="Your email address"
+                />
+              </div>
+              <button class="btn btn-success w-100">Subscribe</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <hr class="my-5" />
+        <div class="row align-items-center">
+          <div class="col-md-4">
+            <p class="text-muted mb-md-0">
+              © 2022 TeeSpace. All rights reserved.
+            </p>
+          </div>
+          <div class="col-md-4 text-center">
+            <div class="payment-methods">
+           <img src="/images/footer-payment-method.png.png" alt="">
+            </div>
+          </div>
+          <div class="col-md-4 text-md-end">
+            <div class="social-icons">
+              <a href="#"><i class="bi bi-twitter"></i></a>
+              <a href="#"><i class="bi bi-facebook"></i></a>
+              <a href="#"><i class="bi bi-instagram"></i></a>
+              <a href="#"><i class="bi bi-youtube"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
