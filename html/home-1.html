@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Home</title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+      #announcement-bar {
+        background: linear-gradient(-20deg, #dbf4e2, transparent);
+      }
+      #create-your-own {
+        color: #b479d9;
+        border: none;
+        background: rgba(180, 121, 217, 0.15);
+      }
+      #title-of-hero {
+        background-image: url("../images/home-1-bg-title-hero.png");
+        background-repeat: no-repeat;
+        background-position: 80px 50px;
+        align-items: end;
+      }
+      #number-rounded {
+        width: 50px;
+        height: 50px;
+      }
+      .top-10 {
+        top: 10%;
+      }
+      .top-5 {
+        top: 5%;
+      }
+      .start-10 {
+        left: 10% !important;
+      }
+      #color-rounded {
+        width: 50px;
+        height: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <!-- Announcement Bar -->
+      <section>
+        <div
+          class="p-2 d-flex justify-content-center fw-bolder p-2 align-items-center"
+          id="announcement-bar"
+        >
+          <span>
+            <img src="../images/icons/fire-icon.png" alt="Fire Icon" /> Free
+            shipping on all U.S. orders $50+</span
+          >
+          <a
+            href="#"
+            class="text-dark text-decoration-none bg-white btn mx-4 fw-bolder rounded-2"
+            >Shop Now</a
+          >
+        </div>
+      </section>
+
+      <!-- Nav Bar -->
+      <section>
+        <nav class="navbar navbar-expand-lg navbar-light fw-bold">
+          <div class="container-fluid px-5">
+            <a class="navbar-brand justify-content-start" href="#">
+              <img src="../images/logo/logo-black.png" alt="TeeSpace" />
+            </a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNav"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav mx-auto bt">
+                <li class="nav-item">
+                  <div class="dropdown">
+                    <button
+                      class="btn dropdown-toggle text-success fw-bold"
+                      type="button"
+                      data-bs-toggle="dropdown"
+                    >
+                      Home
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Action 1</a></li>
+                      <li><a class="dropdown-item" href="#">Action 2</a></li>
+                      <li><a class="dropdown-item" href="#">Action 3</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <div class="dropdown">
+                    <button
+                      class="btn dropdown-toggle fw-bold"
+                      type="button"
+                      data-bs-toggle="dropdown"
+                    >
+                      TeeSpace
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Action 1</a></li>
+                      <li><a class="dropdown-item" href="#">Action 2</a></li>
+                      <li><a class="dropdown-item" href="#">Action 3</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <div class="dropdown">
+                    <button
+                      class="btn dropdown-toggle fw-bold"
+                      type="button"
+                      data-bs-toggle="dropdown"
+                    >
+                      Shop
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Action 1</a></li>
+                      <li><a class="dropdown-item" href="#">Action 2</a></li>
+                      <li><a class="dropdown-item" href="#">Action 3</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <div class="dropdown">
+                    <button
+                      class="btn dropdown-toggle fw-bold"
+                      type="button"
+                      data-bs-toggle="dropdown"
+                    >
+                      Blog
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Action 1</a></li>
+                      <li><a class="dropdown-item" href="#">Action 2</a></li>
+                      <li><a class="dropdown-item" href="#">Action 3</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <div class="dropdown">
+                    <button
+                      class="btn dropdown-toggle fw-bold"
+                      type="button"
+                      data-bs-toggle="dropdown"
+                    >
+                      Pages
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Action 1</a></li>
+                      <li><a class="dropdown-item" href="#">Action 2</a></li>
+                      <li><a class="dropdown-item" href="#">Action 3</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"
+                    ><img src="../images/icons/search.png" alt="Search"
+                  /></a>
+                </li>
+              </ul>
+              <div class="d-flex align-items-center">
+                <div class="mx-5">
+                  <span class="text-black-50">HOTLINE:</span><br />
+                  00 1900 8188
+                </div>
+                <button class="btn btn-dark">Sign Up</button>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </section>
+
+      <!-- Hero  -->
+      <section>
+        <div class="container my-5">
+          <div class="row g-4">
+            <div class="col-md-6">
+              <div class="row mb-4">
+                <div class="col">
+                  <button
+                    class="btn btn-outline-secondary rounded-5"
+                    id="create-your-own"
+                  >
+                    Create your own
+                  </button>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-12 mb-4">
+                  <div
+                    class="title-section justify-content-end"
+                    id="title-of-hero"
+                  >
+                    <h1 class="display-5 fw-bold">
+                      Make the most<br />
+                      of o <br />printing
+                    </h1>
+                  </div>
+                </div>
+
+                <div class="col-12 mb-4">
+                  <h3 class="text-muted fs-6">
+                    What's more, we do it right! A full administration printing
+                    background. Print shirts for yourself or your online
+                    business
+                  </h3>
+                </div>
+
+                <div class="col-12 mb-4">
+                  <div>
+                    <button class="btn btn-success me-2">
+                      Shop Now
+                      <img src="../images/icons/arrow.png" alt="Search" />
+                    </button>
+                    <span class="text-dark fw-bold"
+                      >How We Work <img src="../images/icons/Link.png" alt=""
+                    /></span>
+                  </div>
+                </div>
+
+                <div class="col-12">
+                  <div class="row">
+                    <div class="col-6 col-md-5 col-lg-3">
+                      <h2 class="fw-bold">4k+</h2>
+                      <p class="text-muted mb-0">collection</p>
+                    </div>
+                    <div class="col-6 col-md-5 col-lg-3">
+                      <h2 class="fw-bold">9k+</h2>
+                      <p class="text-muted mb-0">items trusted to deliver</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <img
+                src="../images/hom-1-hero.png"
+                alt="Side Image"
+                class="img-fluid h-100 rounded-3"
+                style="object-fit: cover"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-5 bg-light">
+        <div class="container">
+          <div class="row justify-content-center mb-5">
+            <div class="col-md-8 text-center">
+              <p class="h4 fw-normal text-dark fw-bold">
+                "We've got custom T-shirts in a range of fits and sizes, so
+                everyone can wear your brand or message."
+              </p>
+            </div>
+          </div>
+
+          <div class="row align-items-center justify-content-center">
+            <div class="col-6 col-md-2 mb-4 mb-md-0">
+              <img
+                src="../images/logo/Item → Link → logo-spotify.png"
+                alt="Spotify"
+                class="img-fluid"
+              />
+            </div>
+            <div class="col-6 col-md-2 mb-4 mb-md-0">
+              <img
+                src="../images/logo/Item → logo-feedly.png"
+                alt="Feedly"
+                class="img-fluid"
+              />
+            </div>
+            <div class="col-6 col-md-2 mb-4 mb-md-0">
+              <img
+                src="../images/logo/Item → Link → logo-lattice.png"
+                alt="Lattice"
+                class="img-fluid"
+              />
+            </div>
+            <div class="col-6 col-md-2 mb-4 mb-md-0">
+              <img
+                src="../images/logo/Item → logo-hopin.png"
+                alt="Hopin"
+                class="img-fluid"
+              />
+            </div>
+            <div class="col-6 col-md-2 mb-4 mb-md-0">
+              <img
+                src="../images/logo/Item → Link → logo-upwork.png"
+                alt="Upwork"
+                class="img-fluid"
+              />
+            </div>
+            <div class="col-6 col-md-2">
+              <img
+                src="../images/logo/Item → logo-hopin-1.png"
+                alt="Hopin"
+                class="img-fluid"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <section class="py-5">
+        <div class="container">
+          <div class="text-center mb-5">
+            <h2 class="fw-bold mb-3">How to create custom shirts</h2>
+            <p class="text-muted">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus
+              tincidunt eu aliquet.
+            </p>
+          </div>
+
+          <div class="row align-items-center mb-5">
+            <div class="col-md-4 mb-4 mb-md-0">
+              <img
+                src="../images/Main-0-home-1-cols.png"
+                alt="Step 1"
+                class="img-fluid rounded bg-light"
+              />
+            </div>
+            <div class="col-md-2 d-flex justify-content-center order-md-0">
+              <div
+                class="number-rounded text-dark fw-bold bg-white rounded-circle shadow d-flex align-items-center justify-content-center"
+                style="width: 50px; height: 50px;"
+              >
+                1
+              </div>
+              
+            </div>
+            <div class="col-md-4 ps-md-5">
+              <div class="d-flex align-items-center mb-3">
+                <h3 class="h4 mb-0">Add your shirt design</h3>
+              </div>
+              <p class="text-muted">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus
+                tincidunt eu aliquet.
+              </p>
+            </div>
+          </div>
+
+          <div class="row align-items-center mb-5">
+            <div class="col-md-4 order-md-2 mb-4">
+              <img
+                src="../images/Main-1-home-1-cols.png"
+                alt="Step 2"
+                class="img-fluid rounded bg-light"
+              />
+            </div>
+            <div class="col-md-2 d-flex justify-content-center order-md-1">
+              <div
+                class="number-rounded text-dark fw-bold bg-white rounded-circle shadow d-flex align-items-center justify-content-center"
+                style="width: 50px; height: 50px;"
+              >
+                2
+              </div>
+            </div>
+            <div class="col-md-4 ps-md-5 order-md-0">
+              <div class="d-flex align-items-center mb-3">
+                <h3 class="h4 mb-0">Custom artwork & review</h3>
+              </div>
+              <p class="text-muted">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus
+                tincidunt eu aliquet.
+              </p>
+            </div>
+          </div>
+
+          <div class="row align-items-center">
+            <div class="col-md-4 mb-4 mb-md-0">
+              <img
+                src="../images/Main-2-home-1-cols.png"
+                alt="Step 3"
+                class="img-fluid rounded bg-light"
+              />
+            </div>
+            <div class="col-md-2 d-flex justify-content-center ">
+              <div
+                class="number-rounded text-dark fw-bold bg-white rounded-circle shadow d-flex align-items-center justify-content-center"
+                style="width: 50px; height: 50px;"
+              >
+                3
+              </div>
+            </div>
+            <div class="col-md-4 ps-md-5">
+              <div class="d-flex align-items-center mb-3">
+                <h3 class="h4 mb-0">Enjoy your product</h3>
+              </div>
+              <p class="text-muted">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus
+                tincidunt eu aliquet.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-5 bg-light">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-lg-6 mb-4 mb-lg-0">
+              <div class="position-relative">
+                <img
+                  src="../images/home-1-banner-2.png"
+                  alt="Design Preview"
+                  class="img-fluid rounded"
+                />
+              </div>
+            </div>
+            <div class="col-lg-6 ps-lg-5">
+              <h2 class="fw-bold mb-4">
+                Free and easy way to bring your ideas to life
+              </h2>
+              <p class="text-muted mb-4">
+                Lorem ipsum det, cowec tetur duis necgi det, consec t eturlagix
+                adipiscing eliet, cowec tetopak
+              </p>
+              <button class="btn btn-success px-4 py-2">Get Started</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="container my-5">
+          <div class="text-center mb-5">
+            <h2 class="fw-bold mb-3">T-shirt printing made easy.</h2>
+            <p class="text-muted">
+              Lorem ipsum det, cowec tetuec tetur duis necgi duis necgi det, consec eturlagix
+              Lorem ipsum det, cowec tetuec tetur duis necgi duis necgi det, consec eturlagix
+              Lorem ipsum det, cowec tetuec tetur duis necgi duis necgi det, consec eturlagix
+              Lorem ipsum det, cowec tetuec tetur duis necgi duis necgi det, consec eturlagix
+            </p>
+          </div>
+
+
+            <div class="container my-5">
+              <div class="row g-4">
+                <div class="col-md-6">
+                    <div class=" p-4 rounded">
+                    <h6 class="fw-bold pb-2">Premium quality custom t-shirts</h2>
+                    </div>
+                    <div class="bg-white p-4 rounded-4 ">
+                    <h6 class="fw-bold pb-2">Easy to create & customize</h2>
+                    <p class="text-muted">Lorem ipsum det, cowec tetur duis necgi det, consec t
+                      eturlagix adipiscing eliet</p>
+                    </div>
+                    <div class=" p-4 ">
+                    <h6 class="fw-bold pb-2">Thousands of free templates</h2>
+                    </div>
+                    <div class=" p-4 rounded ">
+                    <h6 class="fw-bold pb-2">Free standard shipping</h2>
+                    </div>
+                </div>
+    
+                <div class="col-md-6">
+                  <img
+                    src="../images/home-1-banner-3.png"
+                    alt="Side Image"
+                    class="img-fluid h-100 rounded-3"
+                    style="object-fit: cover"
+                  />
+                </div>
+              </div>
+            </div>
+
+      </section>
+
+
+      <section>
+        <div class="container my-5">
+          <div class="text-center mb-5">
+            <h2 class="fw-bold mb-3">Our picks for you</h2>
+            <p class="text-muted">
+              Lorem ipsum det, cowec tetuec tetur duis necgi duis necgi det, consec eturlagix
+              adipiscing eliet, cowec tetopak
+            </p>
+          </div>
+          <section class="mb-5">
+            <h2 class="mb-4">Our picks for you</h2>
+            <div class="row g-4">
+              <div class="col-md-3">
+                <div class="rounded h-100 position-relative">
+                  <img
+                    src="../images/home-1-t-shirt1.png"
+                    class="img-fluid mb-3 rounded"
+                    alt="Product 1"
+                  />
+                  <h5 class="text-center">Premium Crewneck Sweatshirt</h5>
+                  <p class="text-success fw-bold mb-0 text-center">$19.99 <span class="text-muted fw-normal text-decoration-line-through">$39.00</span></p>
+                  <span
+                    class="position-absolute top-5 start-10 translate-middle badge rounded-1 bg-success"
+                  >
+                    New
+                  </span>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="rounded h-100 position-relative">
+                  <img
+                    src="../images/home-1-t-shirt2.png"
+                    class="img-fluid mb-3 rounded"
+                    alt="Product 2"
+                  />
+                  <h5 class="text-center">Midweight Cotton Tee</h5>
+                  <p class="text-dark fw-bold mb-0 text-center">$26.00 – $29.00</p>
+                  <div class="rounded-circle bg-danger color-rounded  " > </div>
+                  <span
+                    class="position-absolute top-5 start-10 translate-middle badge rounded-1 bg-success"
+                  >
+                    New
+                  </span>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="rounded h-100 position-relative">
+                  <img
+                    src="../images/home-1-t-shirt3.png"
+                    class="img-fluid mb-3 rounded"
+                    alt="Product 3"
+                  />
+                  <h5 class="text-center">Youth Short Sleeve Tee</h5>
+                  <p class="text-dark fw-bold mb-0 text-center">$26.00 – $29.00</p>
+                  <span
+                    class="position-absolute top-10 start-10 translate-middle badge rounded-1 bg-info"
+                  >
+                    Sale!
+                  </span>
+                  <span
+                    class="position-absolute top-5 start-10 translate-middle badge rounded-1 bg-success"
+                  >
+                    New
+                  </span>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="rounded h-100 position-relative">
+                  <img
+                    src="../images/home-1-t-shirt4.png"
+                    class="img-fluid mb-3 rounded"
+                    alt="Product 4"
+                  />
+                  <h5 class="text-center">Fine Jersey Tee</h5>
+                  <p class="text-dark fw-bold mb-0 text-center">$31.00</p>
+                  <span
+                    class="position-absolute top-5 start-10 translate-middle badge rounded-1 bg-success"
+                  >
+                    New
+                  </span>
+                </div>
+              </div>
+            </div>
+          </section>
+    
+          <!-- Templates Banner -->
+          <section class="row g-4 mb-5">
+            <div
+              class="col-md-6 mx-auto rounded-4"
+              style="
+                background-image: url(../images/home-1-banner-26.png);
+                background-size: cover;
+                height: 20rem;
+              "
+            >
+              <div class="p-4 rounded">
+                <h3>
+                  Thousands of <br />
+                  free templates
+                </h3>
+                <br>
+                <p>
+                  Free and easy way to bring <br />
+                  your ideas to life
+                </p>
+                <br>
+                <button class="btn btn-success">
+                  Explore More <img src="../images/icons/arrow.png" alt="Search" />
+                </button>
+              </div>
+            </div>
+    
+            <div
+              class="col-md-5 mx-auto rounded-4"
+              style="
+                background-image: url(../images/home-1-banner-27.png);
+                background-size: cover;
+                height: 20rem;
+              "
+            >
+              <div class="p-4 rounded h-100">
+                <h3>Create your <br />unique style</h3>
+                <br>
+                <p>
+                  Free and easy way to make <br />
+                  your creative to life
+                </p>
+                <br>
+                <button class="btn btn-success">
+                  Shop Now <img src="../images/icons/arrow.png" alt="Search" />
+                </button>
+              </div>
+            </div>
+          </section>
+      </section>
+    </main>
+    <script src="../js/bootstrap.bundle.js"></script>
+  </body>
+</html>
