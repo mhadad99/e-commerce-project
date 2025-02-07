@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Shop</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: "Arial", sans-serif;
+        font-size: 16px;
+        line-height: 1.6;
+        color: #333;
+        background-color: #f5f5f5;
+    }
+
+    .sale-badge {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        background-color: #00c3a0;
+        color: white;
+        padding: 2px 8px;
+        border-radius: 3px;
+        font-size: 12px;
+    }
+
+    .product-card {
+        transition: transform 0.2s;
+    }
+
+    .product-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .rating span {
+        color: #ffd700;
+    }
+
+    .filter-section {
+        border-bottom: 1px solid #eee;
+        padding: 10px 0;
+    }
+
+    .color-circle {
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        display: inline-block;
+        margin-right: 10px;
+        vertical-align: middle;
+    }
+
+    .filter-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 8px 0;
+        color: #666;
+        text-decoration: none;
+    }
+
+    .filter-item:hover {
+        color: #333;
+    }
+
+    .material-icon {
+        width: 24px;
+        height: 24px;
+        background-color: #f0f0f0;
+        border-radius: 50%;
+        margin-right: 10px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+    }
+
+    .filter-section {
+        margin-bottom: 2rem;
+    }
+
+    .filter-section h2 {
+        font-size: 1.2rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+    }
+</style>
+
+<body>
+    <!-- Top Navbar -->
+    <nav class="navbar bg-light py-2 d-none d-lg-block border-bottom">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="d-flex gap-3">
+                <i class="bi bi-twitter text-secondary"></i>
+                <i class="bi bi-facebook text-secondary"></i>
+                <i class="bi bi-instagram text-secondary"></i>
+                <i class="bi bi-youtube text-secondary"></i>
+            </div>
+            <span class="fw-medium"><img src="../images/fire-icon.png" alt="fire-icon">Free shipping on all U.S. orders
+                $50+</span>
+            <div>
+                <a href="#" class="text-dark me-3">Login</a>
+                <button class="btn btn-dark">Sign Up</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Navbar -->
+    <nav class="navbar navbar-expand-lg bg-white py-3 shadow-sm">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item dropdown fw-bold ">
+                        <a class="nav-link dropdown-toggle text-success" href="#" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">HOME</a>
+                    <li class="nav-item dropdown fw-bold">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">TEESPACE</a>
+                    <li class="nav-item dropdown fw-bold">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">SHOP</a>
+                    <li class="nav-item dropdown fw-bold">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">BLOG</a>
+                    <li class="nav-item dropdown fw-bold">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">PAGES</a>
+                </ul>
+                <a class="navbar-brand me-auto" href="#"><img src="../images/main-logo-black.png" alt="TeeSpace"
+                        height="30"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="d-flex gap-3">
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    </form>
+                    <i class="bi bi-heart btn position-relative">
+                        <span
+                            class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success">0</span>
+                    </i>
+                    <i class="bi bi-bag btn position-relative">
+                        <span
+                            class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success">0</span>
+                    </i>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 bg-light">
+                <img src="../images/hero section shop page.png" class="img-fluid w-100" alt="hero">
+            </div>
+        </div>
+    </div>
+
+    <div class="container bg-white">
+        <div class="row">
+            <!-- Sidebar Filters -->
+            <div class="col-md-3 p-4">
+
+                <!-- Search Filters -->
+                <div class="search mb-4">
+                    <h5 class="fw-bold">Search</h5>
+                    <input type="text" class="form-control bg-light" placeholder="Search products...">
+                </div>
+
+                <!-- Filter by product -->
+                <div class="filter-section">
+                    <h5 class="fw-bold">Product categories</h5>
+                    <div class="d-flex flex-column">
+                        <a href="#" class="filter-item">
+                            <span class="text-secondary">Hoodie</span>
+                            <span>11</span>
+                        </a>
+                        <a href="#" class="filter-item">
+                            <span>Kids</span>
+                            <span>4</span>
+                        </a>
+                        <a href="#" class="filter-item">
+                            <span class="text-secondary">Long Sleeves</span>
+                            <span>0</span>
+                        </a>
+                        <a href="#" class="filter-item">
+                            <span class="text-secondary">Product Designer</span>
+                            <span>2</span>
+                        </a>
+                        <a href="#" class="filter-item">
+                            <span class="text-secondary">Sweater</span>
+                            <span>2</span>
+                        </a>
+                        <a href="#" class="filter-item">
+                            <span class="text-secondary">T-Shirt</span>
+                            <span>5</span>
+                        </a>
+                    </div>
+                </div>
+                <!-- Filter by Price Range -->
+                <div class="filter-section">
+                    <h5 class="fw-bold">Filter by price</h5>
+                    <div class="range">
+                        <input type="range" class="form-range" min="10" max="160">
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <span>$10</span>
+                        <span>$160</span>
+                    </div>
+                </div>
+
+                <!-- Filter by Color -->
+                <div class="filter-section">
+                    <h2>Filter by Color</h2>
+                    <div class="d-flex flex-column">
+                        <a href="#" class="filter-item">
+                            <div class="d-flex align-items-center">
+                                <span class="color-circle" style="background-color: black;"></span>
+                                Black
+                            </div>
+                            <span>14</span>
+                        </a>
+                        <a href="#" class="filter-item">
+                            <div class="d-flex align-items-center">
+                                <span class="color-circle" style="background-color: #A0785A;"></span>
+                                Brown
+                            </div>
+                            <span>13</span>
+                        </a>
+                        <a href="#" class="filter-item">
+                            <div class="d-flex align-items-center">
+                                <span class="color-circle" style="background-color: red;"></span>
+                                Red
+                            </div>
+                            <span>13</span>
+                        </a>
+                        <a href="#" class="filter-item">
+                            <div class="d-flex align-items-center">
+                                <span class="color-circle"
+                                    style="background-color: white; border: 1px solid #ddd;"></span>
+                                White
+                            </div>
+                            <span>13</span>
+                        </a>
+                        <a href="#" class="filter-item">
+                            <div class="d-flex align-items-center">
+                                <span class="color-circle" style="background-color: yellow;"></span>
+                                Yellow
+                            </div>
+                            <span>13</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Filter by Size -->
+                <div class="filter-section">
+                    <h2>Filter by Size</h2>
+                    <div class="d-flex flex-column">
+                        <a href="#" class="filter-item">
+                            <span class="text-secondary">2XL</span>
+                            <span>14</span>
+                        </a>
+                        <a href="#" class="filter-item">
+                            <span class="text-secondary">3XL</span>
+                            <span>14</span>
+                        </a>
+                        <a href="#" class="filter-item">
+                            <span class="text-secondary">L</span>
+                            <span>14</span>
+                        </a>
+                        <a href="#" class="filter-item">
+                            <span class="text-secondary">M</span>
+                            <span>14</span>
+                        </a>
+                        <a href="#" class="filter-item">
+                            <span class="text-secondary">S</span>
+                            <span>14</span>
+                        </a>
+                        <a href="#" class="filter-item">
+                            <span class="text-secondary">XL</span>
+                            <span>14</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Filter by Material -->
+                <div class="filter-section">
+                    <h2>Filter by Material</h2>
+                    <div class="d-flex flex-column">
+                        <a href="#" class="filter-item">
+                            <div class="d-flex align-items-center">
+                                <span class="material-icon"><img src="../images/M icon G.png" alt="G"></span>
+                                Glass
+                            </div>
+                            <span>14</span>
+                        </a>
+                        <a href="#" class="filter-item">
+                            <div class="d-flex align-items-center">
+                                <span class="material-icon"><img src="../images/M icon M.png" alt="M"></span>
+                                Metal
+                            </div>
+                            <span>14</span>
+                        </a>
+                        <a href="#" class="filter-item">
+                            <div class="d-flex align-items-center">
+                                <span class="material-icon"><img src="../images/M icon P.png" alt="P"></span>
+                                Paper
+                            </div>
+                            <span>14</span>
+                        </a>
+                        <a href="#" class="filter-item">
+                            <div class="d-flex align-items-center">
+                                <span class="material-icon"><img src="../images/M icon W.png" alt="W"></span>
+                                Wood
+                            </div>
+                            <span>14</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Filter by Price -->
+                <div class="filter-section">
+                    <h5 class="fw-bold">Price filter</h5>
+                    <ul class="list-unstyled">
+                        <li class="fw-bold mb-3">All</li>
+                        <li class="text-secondary mb-3">$0.00 - $40.00</li>
+                        <li class="text-secondary mb-3">$40.00 - $80.00</li>
+                        <li class="text-secondary mb-3">$80.00 - $120.00</li>
+                        <li class="text-secondary mb-3">$120.00 - $160.00</li>
+                    </ul>
+                </div>
+
+                <!-- Filter Sort by -->
+                <div class="filter-section">
+                    <h5 class="fw-bold">Sort by</h5>
+                    <ul class="list-unstyled">
+                        <li class="text-secondary mb-3">Popularity</li>
+                        <li class="text-secondary mb-3">Average rating</li>
+                        <li class="text-secondary mb-3">Latest</li>
+                        <li class="text-secondary mb-3">Price: low to high</li>
+                        <li class="text-secondary mb-3">Price: high to low</li>
+                        <li class="text-secondary mb-3">T-Shirt</li>
+                    </ul>
+                </div>
+
+                <!-- Filter Stock status -->
+                <div class="filter-section">
+                    <h5 class="fw-bold mb-3">Stock status</h5>
+                    <div class="form-check mb-3 text-secondary">
+                        <input class="form-check-input" type="checkbox" id="color1">
+                        <label class="form-check-label" for="color1"> On sale</label>
+                    </div>
+                    <div class="form-check mb-3 text-secondary">
+                        <input class="form-check-input" type="checkbox" id="color2">
+                        <label class="form-check-label" for="color2"> In stock</label>
+                    </div>
+                    <div class="form-check mb-3 text-secondary">
+                        <input class="form-check-input" type="checkbox" id="color3">
+                        <label class="form-check-label" for="color3"> Out of stock</label>
+                    </div>
+                    <div class="form-check mb-3 text-secondary">
+                        <input class="form-check-input" type="checkbox" id="color3">
+                        <label class="form-check-label" for="color3"> On back order</label>
+                    </div>
+                </div>
+
+                <!-- Filter Product tags -->
+                <div class="filter-section">
+                    <h5 class="fw-bold mb-3">Product tags</h5>
+                    <div>
+                        <button class="btn btn-light px-3 me-2 mb-2 text-muted" type="submit">designer</button>
+                        <button class="btn btn-light px-3 me-2 mb-2 text-muted" type="submit">kids</button>
+                        <button class="btn btn-light px-3 me-2 mb-2 text-muted" type="submit">t-shirt</button>
+                        <button class="btn btn-light px-3 me-2 mb-2 text-muted" type="submit">woman</button>
+                    </div>
+                </div>
+                
+            </div>
+
+            <!-- Product Grid -->
+            <div class="col-md-9 p-4">
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                    
+                    <!-- Product Card 1 -->
+                    <div class="col">
+                        <div class="card product-card">
+                            <div class="position-relative">
+                                <img src="../images/shop pic1.png" class="card-img-top" alt="Product">
+                                <span class="sale-badge">SALE</span>
+                            </div>
+                            <div class="card-body text-center">
+                                <h5 class="card-title fw-bold">Adult Quantity Tee</h5>
+                                <p class="card-text fw-bold">$26.00 – $29.00</p>
+                                <div class="rating">
+                                    <span>★★★★</span>★
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product Card 2 -->
+                    <div class="col">
+                        <div class="card product-card">
+                            <div class="position-relative">
+                                <img src="../images/shop pic2.png" class="card-img-top" alt="Product">
+                                <span class="sale-badge">SALE</span>
+                            </div>
+                            <div class="card-body text-center">
+                                <h5 class="card-title fw-bold">All-Over-Print Hoodie</h5>
+                                <p class="card-text fw-bold">$26.00 – $29.00</p>
+                                <div class="rating">
+                                    <span>★★★★★</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product Card 3 -->
+                    <div class="col">
+                        <div class="card product-card">
+                            <div class="position-relative">
+                                <img src="../images/shop pic3.png" class="card-img-top" alt="Product">
+                                <span class="sale-badge">SALE</span>
+                            </div>
+                            <div class="card-body text-center">
+                                <h5 class="card-title fw-bold">AOP Cut & Sew Tee</h5>
+                                <p class="card-text fw-bold">$26.00 – $29.00</p>
+                                <div class="rating">
+                                    <span>★★★★</span>★
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product Card 4 -->
+                    <div class="col">
+                        <div class="card product-card">
+                            <div class="position-relative">
+                                <img src="../images/shop pic4.png" class="card-img-top" alt="Product">
+                                <span class="sale-badge">SALE</span>
+                            </div>
+                            <div class="card-body text-center">
+                                <h5 class="card-title fw-bold">Fine Jersey Tee</h5>
+                                <p class="card-text fw-bold">$28.00 $31.00</p>
+                                <div class="rating">
+                                    <span>★★★★</span>★
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product Card 5 -->
+                    <div class="col">
+                        <div class="card product-card">
+                            <div class="position-relative">
+                                <img src="../images/shop pic5.png" class="card-img-top" alt="Product">
+                                <span class="sale-badge">SALE</span>
+                            </div>
+                            <div class="card-body text-center">
+                                <h5 class="card-title fw-bold">Fit Round-neck T-shirt</h5>
+                                <p class="card-text fw-bold">$26.00 – $29.00</p>
+                                <div class="rating">
+                                    <span>★★★★★</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product Card 6 -->
+                    <div class="col">
+                        <div class="card product-card">
+                            <div class="position-relative">
+                                <img src="../images/shop pic6.png" class="card-img-top" alt="Product">
+                                <span class="sale-badge">SALE</span>
+                            </div>
+                            <div class="card-body text-center">
+                                <h5 class="card-title fw-bold">Hooded Sweatshirt</h5>
+                                <p class="card-text fw-bold">$28.00</p>
+                                <div class="rating">
+                                    <span>★★★★</span>★
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product Card 7 -->
+                    <div class="col">
+                        <div class="card product-card">
+                            <div class="position-relative">
+                                <img src="../images/shop pic7.png" class="card-img-top" alt="Product">
+                                <span class="sale-badge">SALE</span>
+                            </div>
+                            <div class="card-body text-center">
+                                <h5 class="card-title fw-bold">Kids Hoodie</h5>
+                                <p class="card-text fw-bold">$26.00 – $29.00</p>
+                                <div class="rating">
+                                    <span>★★★★</span>★
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product Card 8 -->
+                    <div class="col">
+                        <div class="card product-card">
+                            <div class="position-relative">
+                                <img src="../images/shop pic8.png" class="card-img-top" alt="Product">
+                                <span class="sale-badge">SALE</span>
+                            </div>
+                            <div class="card-body text-center">
+                                <h5 class="card-title fw-bold">Lightweight Fashion Tee</h5>
+                                <p class="card-text fw-bold">$32.00 $36.00</p>
+                                <div class="rating">
+                                    <span>★★★★★</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product Card 9 -->
+                    <div class="col">
+                        <div class="card product-card">
+                            <div class="position-relative">
+                                <img src="../images/shop pic9.png" class="card-img-top" alt="Product">
+                                <span class="sale-badge">SALE</span>
+                            </div>
+                            <div class="card-body text-center">
+                                <h5 class="card-title fw-bold">Midweight Cotton Tee</h5>
+                                <p class="card-text fw-bold">$26.00 – $29.00</p>
+                                <div class="rating">
+                                    <span>★★★★</span>★
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product Card 10 -->
+                    <div class="col">
+                        <div class="card product-card">
+                            <div class="position-relative">
+                                <img src="../images/shop pic10.png" class="card-img-top" alt="Product">
+                                <span class="sale-badge">SALE</span>
+                            </div>
+                            <div class="card-body text-center">
+                                <h5 class="card-title fw-bold">Premium Crewneck Sweat</h5>
+                                <p class="card-text fw-bold">$29.00 $39.00</p>
+                                <div class="rating">
+                                    <span>★★★★</span>★
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product Card 11 -->
+                    <div class="col">
+                        <div class="card product-card">
+                            <div class="position-relative">
+                                <img src="../images/shop pic11.png" class="card-img-top" alt="Product">
+                                <span class="sale-badge">SALE</span>
+                            </div>
+                            <div class="card-body text-center">
+                                <h5 class="card-title fw-bold">Premium Pullover Hoodie</h5>
+                                <p class="card-text fw-bold">$26.00 – $29.00</p>
+                                <div class="rating">
+                                    <span>★★★★★</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product Card 12 -->
+                    <div class="col">
+                        <div class="card product-card">
+                            <div class="position-relative">
+                                <img src="../images/shop pic12.png" class="card-img-top" alt="Product">
+                                <span class="sale-badge">SALE</span>
+                            </div>
+                            <div class="card-body text-center">
+                                <h5 class="card-title fw-bold">Product Price by Options</h5>
+                                <p class="card-text fw-bold">$26.00 – $29.00</p>
+                                <div class="rating">
+                                    <span>★★★★</span>★
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Pagination -->
+                <nav class="mt-4">
+                    <ul class="pagination justify-content-center">
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#"> >> </a></li>
+                    </ul>
+                </nav>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="container-fluid bg-light p-5 justify-content-between align-items-center">
+        <div class="row">
+            <div class="col-md-3 text-start">
+                <img src="../images/main-logo-black.png" class="mb-3" alt="TeeSpace" height="35">
+                <p class="text-secondary mb-3">hello@teespace.io</p>
+                <p class="fw-bold mb-3 fs-5">+02 036 038 3996</p>
+                <p class="text-secondary mb-1">3665 Paseo Place, Suite 0960 </p><span class="text-secondary">San
+                    Diego</span>
+            </div>
+            <div class="col-md-3 text-start">
+                <h5 class="fw-bold mb-4">Information</h5>
+                <ul class="list-unstyled">
+                    <li class="text-secondary mb-3">About Us</li>
+                    <li class="text-secondary mb-3">Our Blog</li>
+                    <li class="text-secondary mb-3">Start a Return</li>
+                    <li class="text-secondary mb-3">Contact Us</li>
+                    <li class="text-secondary mb-3">Shipping FAQs</li>
+                </ul>
+            </div>
+            <div class="col-md-3 text-start">
+                <h5 class="fw-bold mb-4">UsefulLinks</h5>
+                <ul class="list-unstyled">
+                    <li class="text-secondary mb-3">My Account</li>
+                    <li class="text-secondary mb-3">Shipping</li>
+                    <li class="text-secondary mb-3">Contact & Support</li>
+                    <li class="text-secondary mb-3">All Products</li>
+                    <li class="text-secondary mb-3">Design Product</li>
+                </ul>
+            </div>
+            <div class="col-md-3 text-start">
+                <h5 class="fw-bold mb-4">Any questions</h5>
+                <p class="fw-bold fs-4 mb-3">hello@teespace.com</p>
+                <p class="text-secondary mb-3">Find answers to all of your questions</p>
+                <div class="d-flex gap-3 mb-3">
+                    <i class="bi bi-twitter text-secondary me-2"></i>
+                    <i class="bi bi-facebook text-secondary me-2"></i>
+                    <i class="bi bi-instagram text-secondary me-2"></i>
+                    <i class="bi bi-youtube text-secondary me-2"></i>
+                </div>
+            </div>
+        </div>
+        <div class="text-center">
+            <div>
+                <img src="../images/footer-payment-method.png.png" alt="Payment" class="m-4">
+            </div>
+            <p class="text-secondary">© 2025 TeeSpace. All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
