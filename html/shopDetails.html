@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Page - TeeSpace</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    />
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+   
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+
+   .product-card {
+            text-align: center;
+            border-radius: 10px;
+            padding: 15px;
+            background: #fff;
+        }
+        .badge-sale {
+            background: #4CAF50;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 12px;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+        .badge-new {
+            background: #a855f7;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 12px;
+            position: absolute;
+            top: 10px;
+            left: 60px;
+        }
+        .product-img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .color-options {
+            display: flex;
+            justify-content: center;
+            gap: 5px;
+            margin-top: 5px;
+        }
+        .color-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            display: inline-block;
+            border: 1px solid #ccc;
+        }
+
+
+      .drag-drop-area {
+        border: 2px dashed #ccc;
+        padding: 20px;
+        text-align: center;
+        cursor: pointer;
+        margin-top: 20px;
+        border-radius: 10px;
+        background: #f9f9f9;
+        font-weight: bold;
+        color: #333;
+      }
+      .drag-drop-area.dragover {
+        background-color: #e8f5e9;
+        border-color: #4caf50;
+      }
+      .drag-drop-area input[type="file"] {
+        display: none;
+      }
+      .upload-btn {
+        background: #000;
+        color: #fff;
+        padding: 5px 10px;
+        border-radius: 5px;
+        cursor: pointer;
+        display: inline-block;
+        margin-top: 10px;
+      }
+      
+        .product-card {
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s ease-in-out;
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+        .badge-sale {
+            background-color: #28a745;
+            color: white;
+            font-size: 0.8rem;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+        .badge-new {
+            background-color: #6f42c1;
+            color: white;
+            font-size: 0.8rem;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+             .product-card {
+            text-align: center;
+            border-radius: 10px;
+            padding: 15px;
+            background: #fff;
+            position: relative;
+        }
+        .badge-sale {
+            background: #4CAF50;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 12px;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+        .badge-new {
+            background: #a855f7;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 12px;
+            position: absolute;
+            top: 10px;
+            left: 60px;
+        }
+        .badge-hot {
+            background: #ff5722;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 12px;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+        .product-img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .color-options {
+            display: flex;
+            justify-content: center;
+            gap: 5px;
+            margin-top: 5px;
+        }
+        .color-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            display: inline-block;
+            border: 1px solid #ccc;
+        }
+        .footer {
+            background: #f8f9fa;
+            padding: 40px 0;
+        }
+        .footer-logo {
+            font-size: 20px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+        }
+        .footer-logo img {
+            width: 30px;
+            margin-right: 8px;
+        }
+        .footer a {
+            text-decoration: none;
+            color: black;
+            font-size: 14px;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        .footer-icons a {
+            font-size: 18px;
+            margin-right: 10px;
+            color: black;
+        }
+        .payment-icons img {
+            width: 40px;
+            margin-right: 5px;
+        }
+         .navbar-brand img {
+            height: 40px;
+        }
+        .nav-link {
+            font-weight: bold;
+            font-size: 14px;
+        }
+        .search-box {
+            border: 1px solid #ddd;
+            border-radius: 20px;
+            padding: 5px 10px;
+            width: 200px;
+        }
+        .icon-btn {
+            position: relative;
+            font-size: 18px;
+            color: black;
+            margin-left: 10px;
+        }
+        .icon-btn .badge {
+            font-size: 10px;
+            position: absolute;
+            top: 0;
+            right: -5px;
+            background-color: #198754;
+        }
+        .breadcrumb-container {
+            background: #f8f9fa;
+            padding: 10px 0;
+        }
+        .breadcrumb {
+            font-size: 14px;
+        }
+   
+              .breadcrumb-container {
+            background: #f8f9fa;
+            padding: 10px 0;
+        }
+        .breadcrumb {
+            font-size: 14px;
+        }
+        .breadcrumb-item + .breadcrumb-item::before {
+            content: "—";
+            color: #000;
+            padding: 0 8px;
+        }
+         .top-bar {
+            background-color: white;
+            padding: 8px 0;
+            font-size: 14px;
+        }
+        .social-icons a {
+            color: #aaa;
+            font-size: 18px;
+            margin-right: 12px;
+            transition: color 0.3s;
+        }
+        .social-icons a:hover {
+            color: black;
+        }
+        .shipping-text {
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+        }
+        .auth-buttons a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            margin-left: 15px;
+        }
+        .sign-up-btn {
+            background-color: black;
+            color: white;
+            padding: 6px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+    </style>
+  </head>
+  <body>
+   
+
+  <div class="top-bar">
+        <div class="container d-none d-lg-flex justify-content-between align-items-center">
+            <!-- Left: Social Icons -->
+            <div class="social-icons d-flex">
+                <a href="#"><i class="bi bi-twitter"></i></a>
+                <a href="#"><i class="bi bi-facebook"></i></a>
+                <a href="#"><i class="bi bi-instagram"></i></a>
+                <a href="#"><i class="bi bi-youtube"></i></a>
+            </div>
+
+            <!-- Center: Free Shipping Text -->
+            <div class="shipping-text">
+                <span style="color: orange;">🔥</span> Free shipping on all U.S. orders $50+
+            </div>
+
+            <!-- Right: Login and Sign Up Buttons -->
+            <div class="auth-buttons">
+                <a href="#">Login</a>
+                <a href="#" class="sign-up-btn text-light">Sign Up</a>
+            </div>
+        </div>
+    </div>
+
+   <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
+        <div class="container">
+            <!-- Left Menu -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Home</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Home 1</a></li>
+                            <li><a class="dropdown-item" href="#">Home 2</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">TeeSpace</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">About</a></li>
+                            <li><a class="dropdown-item" href="#">Services</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Shop</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">All Products</a></li>
+                            <li><a class="dropdown-item" href="#">Categories</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Pages</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Contact</a></li>
+                            <li><a class="dropdown-item" href="#">FAQs</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Logo -->
+           <a class="navbar-brand navbar-brand-center" href="#">
+                <img src="/images/logo-home2.png" class="mx-lg-5" alt="TeeSpace">
+            </a>
+            <!-- Right Section -->
+            <div class="d-flex align-items-center">
+                <div class="search-box">
+                    <input type="text" class="form-control border-0" placeholder="Search...">
+                </div>
+                <a href="#" class="icon-btn"><i class="bi bi-star"></i><span class="badge">0</span></a>
+                <a href="#" class="icon-btn"><i class="bi bi-bag"></i><span class="badge">0</span></a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb-container mx-auto">
+        <div class="container text-center">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb mb-0 mx-auto text-lg-center d-flex justify-content-center">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item"><a href="#">Hoodie</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Pullover Hoodie Sweatshirt</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-md-6">
+          <img
+            src="/images/shopdetails-1.png"
+            class="img-fluid"
+            alt="Product Image"
+          />
+          <div class="d-flex mt-2">
+            <img
+              src="/images/shopdetails-1.png"
+              class="img-thumbnail me-2"
+              width="80"
+            />
+            <img
+              src="/images/shopdetails2.png"
+              class="img-thumbnail me-2"
+              width="80"
+            />
+            <img
+              src="/images/shopdetails3.png"
+              class="img-thumbnail me-2"
+              width="80"
+            />
+          </div>
+        </div>
+        <div class="col-md-6">
+          <h2>Pullover Hoodie Sweatshirt</h2>
+          <p class="text-muted">$26.00 - $29.00</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <h5>Color:</h5>
+          <div class="d-flex">
+            <div class="rounded-circle bg-dark p-3 me-2"></div>
+            <div class="rounded-circle bg-danger p-3 me-2"></div>
+            <div class="rounded-circle bg-warning p-3 me-2"></div>
+          </div>
+          <h5 class="mt-3">Size:</h5>
+          <div>
+            <button class="btn btn-outline-secondary">S</button>
+            <button class="btn btn-outline-secondary">M</button>
+            <button class="btn btn-outline-secondary">L</button>
+          </div>
+          <h4 class="text-success mt-3">
+            $27.00 <del class="text-muted">$34.00</del>
+          </h4>
+          <button class="btn btn-success mt-3">Add to Cart</button>
+
+          <div class="drag-drop-area" id="dragDropArea">
+            <p>Drag & Drop Files Here or</p>
+            <label class="upload-btn" for="fileInput">Browse Files</label>
+            <input type="file" id="fileInput" multiple />
+            <p class="text-muted">0 of 10</p>
+          </div>
+          <ul id="fileList"></ul>
+          <div class="container mt-5">
+            <div class="card p-4 shadow-sm">
+              <div class="d-flex align-items-center">
+                <button class="btn btn-outline-secondary btn-sm">-</button>
+                <input
+                  type="text"
+                  class="form-control text-center mx-2"
+                  value="1"
+                  style="width: 50px"
+                />
+                <button class="btn btn-outline-secondary btn-sm">+</button>
+                <button class="btn btn-success ms-3">Add To Cart</button>
+              </div>
+              <div class="mt-3">
+                <a href="#" class="text-decoration-none me-3"
+                  ><i class="bi bi-star"></i> Add to wishlist</a
+                >
+                <a href="#" class="text-decoration-none"
+                  ><i class="bi bi-arrow-left-right"></i> Compare</a
+                >
+              </div>
+              <hr />
+              <p><strong>SKU:</strong> N/A</p>
+              <p><strong>Category:</strong> Hoodie</p>
+              <p>
+                <strong>Tags:</strong>
+                <span class="badge bg-secondary">designer</span>
+                <span class="badge bg-secondary">t-shirt</span>
+              </p>
+              <p>
+                <strong>Share:</strong>
+                <a href="#" class="text-decoration-none me-2"
+                  ><i class="bi bi-facebook"></i
+                ></a>
+                <a href="#" class="text-decoration-none me-2"
+                  ><i class="bi bi-twitter"></i
+                ></a>
+                <a href="#" class="text-decoration-none me-2"
+                  ><i class="bi bi-linkedin"></i
+                ></a>
+                <a href="#" class="text-decoration-none me-2"
+                  ><i class="bi bi-pinterest"></i
+                ></a>
+                <a href="#" class="text-decoration-none"
+                  ><i class="bi bi-telegram"></i
+                ></a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="container mt-5">
+    <!-- Tabs Navigation -->
+    <ul class="nav nav-tabs" id="productTabs">
+        <li class="nav-item">
+            <a class="nav-link active" data-bs-toggle="tab" href="#description">Description</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" href="#additional-info">Additional Information</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" href="#reviews">Reviews (0)</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" href="#vendor-info">Vendor Info</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" href="#more-products">More Products</a>
+        </li>
+    </ul>
+
+    <!-- Tab Content -->
+    <div class="tab-content mt-4">
+        <div class="tab-pane fade show active" id="description">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>CONSECTETUR A SCELERISQUE</h5>
+                    <p><img src="/images/box-icon-21.svg.png" alt=""> Sed risus neque, sagittis sed pellentesque at, pharetra ut nunc...lo Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro autem nemo, ratione impedit obcaecati adipisci accusamus debitis. Autem et a, nostrum veniam tempore ducimus est qui obcaecati? Quia, reiciendis voluptates? </p>
+                </div>
+                <div class="col-md-4">
+                    <h5>IN PHARETRA TURPIS</h5>
+                    <p>Built around a solid beech frame with legs in polished stainless steel...</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>PELLENTESQUE NEC</h5>
+                    <ul>
+                        <li>Sed risus: pharetra ut nunc</li>
+                        <li>Phasellus id: enim eget ante pellentesque</li>
+                        <li>Integer nisl: euismod ipsum</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="additional-info">
+            <p>Additional product information goes here.</p>
+        </div>
+        <div class="tab-pane fade" id="reviews">
+            <p>No reviews yet.</p>
+        </div>
+        <div class="tab-pane fade" id="vendor-info">
+            <p>Vendor details will be displayed here.</p>
+        </div>
+        <div class="tab-pane fade" id="more-products">
+            <p>More products section.</p>
+        </div>
+    </div>
+
+    <!-- You may also like Section -->
+    <h3 class="mt-5 text-center">You may also like...</h3>
+    <!-- <div class="row mt-4">
+        <div class="col-md-3">
+            <div class="product-card p-3">
+                <span class="badge-sale">Sale!</span> <span class="badge-new">New</span>
+                <img src="/images/img4.png" class="img-fluid" alt="Product">
+                <h6 class="mt-3">Fit Round-neck T-shirt</h6>
+                <p>$26.00 - $29.00</p>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="product-card p-3">
+                <span class="badge-sale">Sale!</span> <span class="badge-new">New</span>
+                <img src="/images/img2.png" class="img-fluid" alt="Product">
+                <h6 class="mt-3">Adult Quantity Tee</h6>
+                <p>$26.00 - $29.00</p>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="product-card p-3">
+                <span class="badge-sale">Sale!</span> <span class="badge-new">New</span>
+                <img src="/images/img3.png" class="img-fluid" alt="Product">
+                <h6 class="mt-3">AOP Cut & Sew Tee</h6>
+                <p>$26.00 - $29.00</p>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="product-card p-3">
+                <span class="badge-sale">Sale!</span> <span class="badge-new">New</span>
+                <img src="/images//img1.png" class="img-fluid" alt="Product">
+                <h6 class="mt-3">Relaxed Fit Sweatshirt</h6>
+                <p>$26.00 - $29.00</p>
+                <div class="colors">
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+
+
+ <div id="productCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="row row-cols-1 row-cols-md-4 g-4">
+                    <!-- Product 1 -->
+                    <div class="col">
+                        <div class="product-card position-relative">
+                            <span class="badge-sale">Sale!</span>
+                            <span class="badge-new">New</span>
+                            <img src="/images/img3.png" class="product-img" alt="Product">
+                            <h6>Fit Round-neck T-shirt</h6>
+                            <p>$26.00 - $29.00</p>
+                            <div class="color-options">
+                                <span class="color-dot" style="background: black;"></span>
+                                <span class="color-dot" style="background: rgb(129, 99, 36);"></span>
+                                <span>+3</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product 2 -->
+                    <div class="col">
+                        <div class="product-card position-relative">
+                            <span class="badge-sale">Sale!</span>
+                            <span class="badge-new">New</span>
+                            <img src="/images/team-about-1.jpg.png" class="product-img" alt="Product">
+                            <h6>Adult Quantity Tee</h6>
+                            <p>$26.00 - $29.00</p>
+                            <div class="color-options">
+                                <span class="color-dot" style="background: black;"></span>
+                                <span class="color-dot" style="background: rgb(129, 99, 36);"></span>
+                                <span>+3</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product 3 -->
+                    <div class="col">
+                        <div class="product-card position-relative">
+                            <span class="badge-sale">Sale!</span>
+                            <span class="badge-new">New</span>
+                            <img src="/images/img2.png" class="product-img" alt="Product">
+                            <h6>AOP Cut & Sew Tee</h6>
+                            <p>$26.00 - $29.00</p>
+                            <div class="color-options">
+                                <span class="color-dot" style="background: black;"></span>
+                                <span class="color-dot" style="background: rgb(129, 99, 36);"></span>
+                                <span>+3</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product 4 -->
+                    <div class="col">
+                        <div class="product-card position-relative">
+                            <span class="badge-sale">Sale!</span>
+                            <span class="badge-new">New</span>
+                            <img src="/images/img4.png" class="product-img" alt="Product">
+                            <h6>Relaxed Fit Sweatshirt</h6>
+                            <p>$26.00 - $29.00</p>
+                            <div class="color-options">
+                                <span class="color-dot" style="background: black;"></span>
+                                <span class="color-dot" style="background: rgb(129, 99, 36);"></span>
+                                <span>+3</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+</div>
+<div class="container mt-5">
+        <h4 class="text-center mb-4">Related Products</h4>
+        <div class="row row-cols-1 row-cols-md-4 g-4">
+            <!-- Product 1 -->
+            <div class="col">
+                <div class="product-card">
+                    <span class="badge-sale">Sale!</span>
+                    <span class="badge-new">New</span>
+                    <img src="/images/img2.png" class="product-img" alt="Product">
+                    <h6>Product Price by Options</h6>
+                    <p>$26.00 - $29.00</p>
+                    <div class="color-options">
+                        <span class="color-dot" style="background: black;"></span>
+                        <span class="color-dot" style="background: rgb(165, 42, 161);"></span>
+                        <span>+3</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Product 2 -->
+            <div class="col">
+                <div class="product-card">
+                    <span class="badge-hot">Hot</span>
+                    <img src="/images/img2.png" class="product-img" alt="Product">
+                    <h6>Toddler T-shirt</h6>
+                    <p>$26.00</p>
+                </div>
+            </div>
+            <!-- Product 3 -->
+            <div class="col">
+                <div class="product-card">
+                    <span class="badge-sale">Sale!</span>
+                    <span class="badge-new">New</span>
+                    <img src="/images/img2.png" class="product-img" alt="Product">
+                    <h6>Product Price by Options Toggle</h6>
+                    <p>$26.00 - $29.00</p>
+                    <div class="color-options">
+                        <span class="color-dot" style="background: black;"></span>
+                        <span class="color-dot" style="background: rgb(159, 42, 165);"></span>
+                        <span>+3</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Product 4 -->
+            <div class="col">
+                <div class="product-card">
+                    <img src="/images/img2.png" class="product-img" alt="Product">
+                    <h6>Zoo Men’s T-shirt</h6>
+                    <p>$14.95 - $119.95</p>
+                </div>
+            </div>
+        </div>
+    </div>    
+       <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <!-- Company Info -->
+                <div class="col-md-3">
+                    <div class="footer-logo">
+                        <img src="/images/logo-home2.png" style="width: 250px;" alt="Logo">
+                    </div>
+                    <p class="mt-2">hello@teespace.io</p>
+                    <p><strong>+02 036 038 3996</strong></p>
+                    <p>3665 Paseo Place, Suite 0960<br>San Diego</p>
+                </div>
+
+                <!-- Information Links -->
+                <div class="col-md-3">
+                    <h6><strong>Information</strong></h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Our Blog</a></li>
+                        <li><a href="#">Start a Return</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Shipping FAQs</a></li>
+                    </ul>
+                </div>
+
+                <!-- Useful Links -->
+                <div class="col-md-3">
+                    <h6><strong>Useful Links</strong></h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#">My Account</a></li>
+                        <li><a href="#">Shipping</a></li>
+                        <li><a href="#">Contact & Support</a></li>
+                        <li><a href="#">All Products</a></li>
+                        <li><a href="#">Design Product</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="col-md-3">
+                    <h6><strong>Any questions</strong></h6>
+                    <p><strong>hello@teespace.com</strong></p>
+                    <p>Find answers to all of your questions</p>
+                    <div class="footer-icons">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Payment Icons -->
+            <div class="row mt-4 text-center">
+                <div class="col">
+                    <div class="payment-icons">
+                   <img src="/images/footer-payment-method.png.png" style="width: 250px;" alt=""></div>
+                    <p class="mt-3">&copy; 2022 TeeSpace. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+      const dragDropArea = document.getElementById("dragDropArea");
+      const fileInput = document.getElementById("fileInput");
+      const fileList = document.getElementById("fileList");
+
+      dragDropArea.addEventListener("dragover", (event) => {
+        event.preventDefault();
+        dragDropArea.classList.add("dragover");
+      });
+
+      dragDropArea.addEventListener("dragleave", () => {
+        dragDropArea.classList.remove("dragover");
+      });
+
+      dragDropArea.addEventListener("drop", (event) => {
+        event.preventDefault();
+        dragDropArea.classList.remove("dragover");
+        const files = event.dataTransfer.files;
+        handleFiles(files);
+      });
+
+      fileInput.addEventListener("change", (event) => {
+        handleFiles(event.target.files);
+      });
+
+      function handleFiles(files) {
+        fileList.innerHTML = "";
+        Array.from(files).forEach((file) => {
+          const li = document.createElement("li");
+          li.textContent = file.name;
+          fileList.appendChild(li);
+        });
+      }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
