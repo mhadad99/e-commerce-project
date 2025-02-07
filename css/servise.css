@@ -225,3 +225,145 @@
     margin-bottom: 33px;
     margin-top: 33px;
 }
+/***************** start banner section style *****************/
+.banner-text h3{
+    font-size: 40px; 
+    font-weight: bold;
+    line-height: 46px;
+}
+.banner-text p{
+    color: #7E7E7E;   
+    line-height: 32px;
+}
+.img1 , .img2 , .img3 , .img4{
+    position: relative;
+}
+.banner{
+    margin-bottom: 80px;
+}
+.banner h4{
+    color: white;
+    position: absolute;
+    bottom: 20px;
+    left: 25px;
+}
+
+/***************** start large-service section style *****************/
+.inner-large-service{
+    margin-top: 180px;
+}
+.inner-large-service .text h3{
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 52px;
+}
+.inner-large-service .text p{
+    font-size: 18px;
+    color: #7E7E7E;
+    margin-top: 15px;
+    font-weight: bold;
+    line-height: 32.4px;
+    margin-top: 12px;
+}
+.inner-large-service .text button{
+    margin-top: 16px;
+    background-color: #2EBB77;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    margin-right: 20px;
+    padding: 14px 24px;
+    font-weight: bold;
+}
+.card-row3{
+    position: relative;
+}
+.card-row3 .text{
+    position: absolute;
+    top: 10px;
+    left: 30px;
+}
+.card-row3  img{
+    border-radius: 12px;
+    width: 1000px;
+}
+/********************* start footer section style ****************/
+footer {
+    padding: 50px 0;
+}
+
+footer h5 {
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+footer ul {
+    padding: 0;
+    list-style: none;
+}
+footer p{
+    color: #7E7E7E ;
+}
+footer ul li {
+    margin-bottom: 15px;
+}
+
+footer ul li a {
+    color: #7E7E7E;
+    text-decoration: none;
+    display: block;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+footer ul li a:hover {
+    color: #2EBB77;
+}
+.newsletter input {
+    border-radius: 5px;
+    border: none;
+    padding: 14px 10px;
+    background-color: #F5F5F5;
+    border-radius: 12px;
+    color: #9B9B9B;
+    font-weight: bold;
+}
+.newsletter button {
+    margin-top: 20px;
+    background-color: #2EBB77;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 14px 80px;
+    font-weight: bold;
+}
+.social-icons img {
+    width: 24px;
+    margin-right: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+.social-icons img:hover {
+    transform: scale(1.2);
+}
+
+.payment-icons img {
+    width: 480px;
+    height: 62px;
+}
+
+.footer-bottom {
+    border-top: 1px solid #ddd;
+    padding-top: 15px;
+    margin-top: 80px;
+}
+.contain-footer{
+    margin-top: 60px;
+}
+.contain-footer p{
+    font-size: 18px;
+    line-height: 22.4px;
+}
+.social-icons a i{
+    color: #9B9B9B;
+    font-size: 24px;
+}
+
