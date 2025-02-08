@@ -64,12 +64,7 @@
 /********************** start service style ********************/
 
 .service{
-    height: 223px;
-}
-.service h1{
-    font-size: 40px;
-    font-weight: bold;
-    line-height: 56px;
+    height: 67px;
 }
 .service p{
     color: #7E7E7E;
@@ -88,67 +83,61 @@
     height: 2px;
     background-color: #7E7E7E;
 }
-/***************** start element section style *****************/
-.element{
-    height: 325.78px;
-    position: relative;
-}
-.element-content{
-    display: flex ;
-    position: absolute;
-    top: 35%;
-    /* justify-content: center;
-    align-items: center; */
-}
-.element-content h6{
+/********************** start hero style ********************/
+.hero-text p:nth-child(1){
+    border-radius: 40px;
+    color: #B479D9;
+    background-color: #F4EEFA;
+    padding: 8px 25px;
     font-weight: bold;
+    font-size: 18px;
+    line-height: 25.2px;
 }
-.element-content p{
-    color: #7E7E7E;
-    font-size: 15px;
+.hero-text h3{
     font-weight: bold;
-}
-.element-text h3{
     font-size: 40px;
-    font-weight: bold;
     line-height: 52px;
 }
-.element-text p{
-    font-size: 14px;
-    font-weight: bold;
-    line-height: 19.6px;
-    letter-spacing: 1px;
-}
-/***************** start cards section style *****************/
-.card1 {
-    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
-    margin-right: 30px;
-    border-radius: 12px;
-    padding: 13px 18px;
-}
-.card2 {
-    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
-    margin-right: 30px;
-    border-radius: 12px;
-    padding: 13px 18px;
-}
-.card3 {
-    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
-    margin-right: 30px;
-    border-radius: 12px;
-    padding: 13px 18px;
-}
-.cards p{
+.hero-text p:nth-child(3){
     color: #7E7E7E;
-    font-weight: bold;
-    font-size: 15px;
-    line-height: 27px;
+    font-size: 18px;
 }
-.cards h5{
-    background-color: #F5F5F5;
+ .text i{
+    color: #11B196;
+    font-size: 20px;
+    background-color: #E2F5F2;
+    padding: 3px 10px 3px 2px;
+    border-radius: 16px;
+    width: 32px;
+    height: 32px;
+}
+ .text p{
+    color: black;
+    line-height: 32.4px;
+    font-size: 18px;
+    font-size: medium;
+    margin-left: 10px;
+    
+}
+.btn button{
+    background-color: #2EBB77;
+    color: white;
+    border: none;
     border-radius: 12px;
-    padding: 15px 18px;
+    margin-right: 20px;
+    padding: 14px 26px;
+    font-weight: bold;
 }
+.btn button:hover{
+    background-color: #2EBB77;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    margin-right: 20px;
+    padding: 14px 26px;
+    font-weight: bold;
+}
+
 .card-text p:nth-child(1){
     border-radius: 40px;
     color: #B479D9;
@@ -174,8 +163,8 @@
     font-size: 18px;
     color: white;
     position: absolute;
-    right: -350px;
-    bottom: -40px;
+    right: 30px;
+    /* bottom: -10px; */
 }
 /***************** start graphic section style *****************/
 .graphic .text-container h4:nth-child(1){
@@ -199,7 +188,7 @@
     line-height: 28px;
     font-size: 20px;
     font-weight: bold;
-    background-color: white;
+    background-color: #F8F8F8;
     border-radius: 12px;
     padding: 25px 15px;
     margin-bottom: 33px;
@@ -209,7 +198,7 @@
     line-height: 28px;
     font-size: 20px;
     font-weight: bold;
-    background-color: white;
+    background-color: #F8F8F8;
     border-radius: 12px;
     padding: 25px 15px;
     margin-bottom: 33px;
@@ -219,73 +208,127 @@
     line-height: 28px;
     font-size: 20px;
     font-weight: bold;
-    background-color: white;
+    background-color: #F8F8F8;
     border-radius: 12px;
     padding: 25px 15px;
     margin-bottom: 33px;
     margin-top: 33px;
 }
-/***************** start banner section style *****************/
-.banner-text h3{
-    font-size: 40px; 
+/***************** start cards section style *****************/
+.cards h4{
+    font-size: 24px;
     font-weight: bold;
-    line-height: 46px;
+    line-height: 33.6px;
 }
-.banner-text p{
-    color: #7E7E7E;   
-    line-height: 32px;
+.cards p{
+    font-size: 17px;
+    line-height: 27px;
+    color: #7E7E7E;
 }
-.img1 , .img2 , .img3 , .img4{
+.card-item{
     position: relative;
 }
-.banner{
-    margin-bottom: 80px;
+.circle{
+    height: 50px;
+    width: 50px;
+    background-color: white;
+    color: #9B9B9B;
+    border-radius: 24px;
+    padding: 12px 20px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
 }
-.banner h4{
-    color: white;
+.card-item .left{
     position: absolute;
-    bottom: 20px;
-    left: 25px;
+    top: 35%;
+    left: -130px;
+}
+.card-item .right{
+    position: absolute;
+    top: 35%;
+    right: -130px;
+}
+.join-btn{
+    text-align: center;
+    margin-top: 60px;
+}
+.join-btn button{
+    border:1px solid #EEEEEE;
+    background-color: white;
+    padding: 8px 25px;
+    border-radius: 12px;
+    font-weight: bold;
+}
+.salaries{
+    height: 279.17px;
+    margin-top: 90px;
 }
 
-/***************** start large-service section style *****************/
-.inner-large-service{
-    margin-top: 180px;
-}
-.inner-large-service .text h3{
+.inner-salaries h4{
     font-size: 40px;
     font-weight: bold;
-    line-height: 52px;
+    line-height: 40px;
+    color: #2EBB77;
 }
-.inner-large-service .text p{
-    font-size: 18px;
-    color: #7E7E7E;
-    margin-top: 15px;
-    font-weight: bold;
+.inner-salaries p{
+    font-size: 20px;
+    /* font-weight: bold; */
     line-height: 32.4px;
-    margin-top: 12px;
+    color: #7E7E7E;
 }
-.inner-large-service .text button{
-    margin-top: 16px;
-    background-color: #2EBB77;
-    color: white;
-    border: none;
-    border-radius: 12px;
-    margin-right: 20px;
-    padding: 14px 24px;
+/***************** start graphic section style *****************/
+.cards{
+    background-image: url('../images/Main\ \(1\).png');
+}
+.inner-banner .banner1{
+    padding: 30px 30px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+.inner-banner .banner1 p{
+    color: black;
+    font-size: 22px;
+    line-height: 36px;
+}
+.inner-banner .banner1 .line1 p{
+    color: black;
+    font-size: 18px;
     font-weight: bold;
+    line-height: 25.2px;
 }
-.card-row3{
-    position: relative;
+.inner-banner .banner1 .line1 p span{
+    color: #7E7E7E;
+    font-size: 15px;
+    line-height: 21px;
 }
-.card-row3 .text{
-    position: absolute;
-    top: 10px;
-    left: 30px;
+/******************** start secBanner section style ******************/
+.secBanner{
+    background-color: #64CB9A;
+    height: 451px;
 }
-.card-row3  img{
-    border-radius: 12px;
-    width: 1000px;
+.secBanner .inner-secBanner .secBanner-text{
+    margin-top: 100px;
+}
+.secBanner .inner-secBanner .secBanner-img1 img{
+    width: 100%;
+    height: 451px;
+}
+.secBanner .inner-secBanner .secBanner-text h3{
+    font-size: 48px;
+    font-weight: bold;
+    line-height: 60px;
+    color: white;
+    margin-bottom: 24px;
+}
+.secBanner .inner-secBanner .secBanner-text p{
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 32px;
+    color: white;
+    margin-bottom: 46px;
+}
+.secBanner .inner-secBanner .secBanner-text .btn button{
+    color: black;
+    background-color: white;
 }
 /********************* start footer section style ****************/
 footer {
@@ -366,4 +409,3 @@ footer ul li a:hover {
     color: #9B9B9B;
     font-size: 24px;
 }
-
