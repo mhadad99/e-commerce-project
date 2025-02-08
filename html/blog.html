@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog</title>
+    <link rel="stylesheet" href="../css/bootstrap.css" />
+  </head>
+  <body>
+    <main>
+      <!-- top announcement and nav  -->
+      <section>
+        <div class="bg-light py-2">
+          <div class="container">
+            <div class="row align-items-center">
+              <!-- Left: Social Icons -->
+              <div class="col-auto">
+                <div class="d-flex gap-3">
+                  <a href="#" class="text-secondary"
+                    ><i class="bi bi-twitter"></i
+                  ></a>
+                  <a href="#" class="text-secondary"
+                    ><i class="bi bi-facebook"></i
+                  ></a>
+                  <a href="#" class="text-secondary"
+                    ><i class="bi bi-instagram"></i
+                  ></a>
+                  <a href="#" class="text-secondary"
+                    ><i class="bi bi-youtube"></i
+                  ></a>
+                </div>
+              </div>
+
+              <!-- Center: Promo Text -->
+              <div class="col text-center">
+                <small class="text-warning"
+                  >🔥 Free shipping on all U.S. orders $50+</small
+                >
+              </div>
+
+              <!-- Right: Auth Buttons -->
+              <div class="col-auto">
+                <div class="d-flex gap-2">
+                  <a
+                    href="#"
+                    class="btn btn-link text-dark text-decoration-none"
+                    >Login</a
+                  >
+                  <a href="#" class="btn btn-dark">Sign Up</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <nav
+          class="navbar navbar-expand-lg navbar-light bg-white border-bottom"
+        >
+          <div class="container">
+            <!-- Logo -->
+            <a class="navbar-brand" href="#">
+              <img
+                src="../images/logo/logo-black.png"
+                alt="TeeSpace"
+                height="30"
+              />
+            </a>
+
+            <!-- Toggle Button for Mobile -->
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navigation Items -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle fw-bold"
+                    href="#"
+                    id="homeDropdown"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                  >
+                    HOME
+                  </a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle fw-bold"
+                    href="#"
+                    id="teespaceDropdown"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                  >
+                    TEESPACE
+                  </a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle fw-bold"
+                    href="#"
+                    id="shopDropdown"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                  >
+                    SHOP
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-success fw-bold" href="#">BLOG</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle fw-bold"
+                    href="#"
+                    id="pagesDropdown"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                  >
+                    PAGES
+                  </a>
+                </li>
+              </ul>
+
+              <!-- Search and Cart -->
+              <div class="d-flex align-items-center gap-3">
+                <!-- Search Form -->
+                <form class="d-flex position-relative">
+                  <i
+                    class="bi bi-search position-absolute start-0 top-50 translate-middle-y ms-3"
+                  ></i>
+                  <input
+                    class="form-control ps-5"
+                    type="search"
+                    placeholder="Search..."
+                    aria-label="Search"
+                  />
+                </form>
+
+                <!-- Wishlist -->
+                <div class="position-relative">
+                  <a href="#" class="text-dark">
+                    <i class="bi bi-heart"></i>
+                    <span
+                      class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success"
+                    >
+                      0
+                    </span>
+                  </a>
+                </div>
+
+                <!-- Cart -->
+                <div class="position-relative">
+                  <a href="#" class="text-dark">
+                    <i class="bi bi-cart"></i>
+                    <span
+                      class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success"
+                    >
+                      0
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+
+        <!-- Page header -->
+        <div class="bg-light py-5">
+          <div class="container">
+            <h1 class="text-center mb-3">Blog</h1>
+            <nav
+              style="--bs-breadcrumb-divider: '----'"
+              aria-label="breadcrumb"
+            >
+              <ol class="breadcrumb justify-content-center mb-0">
+                <li class="breadcrumb-item">
+                  <a href="#" class="text-decoration-none text-success">Home</a>
+                </li>
+                <li class="breadcrumb-item active" aria-current="page">Blog</li>
+              </ol>
+            </nav>
+          </div>
+        </div>
+      </section>
+
+      <!-- the main section / body -->
+      <section>
+        <div class="container py-4">
+          <!-- Search and Categories Section -->
+          <div class="row">
+            <div class="col-lg-3">
+              <div class="card mb-4 border-0">
+                <div class="card-body">
+                  <h5 class="card-title">Search</h5>
+                  <div class="input-group mb-3">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Search..."
+                    />
+                    <button class="btn btn-outline-secondary" type="button">
+                      <i class="bi bi-search"></i>
+                    </button>
+                  </div>
+
+                  <h5 class="card-title mt-4">Categories</h5>
+                  <ul class="list-group list-group-flush">
+                    <li
+                      class="list-group-item d-flex justify-content-between align-items-center"
+                    >
+                      Design Services
+                      <span class="badge bg-secondary rounded-pill">4</span>
+                    </li>
+                    <li
+                      class="list-group-item d-flex justify-content-between align-items-center"
+                    >
+                      Print Company
+                      <span class="badge bg-secondary rounded-pill">3</span>
+                    </li>
+                    <li
+                      class="list-group-item d-flex justify-content-between align-items-center"
+                    >
+                      Print Shop
+                      <span class="badge bg-secondary rounded-pill">2</span>
+                    </li>
+                  </ul>
+
+                  <h5 class="card-title mt-4">Latest Posts</h5>
+                  <div class="list-group border-0">
+                    <a
+                      href="#"
+                      class="list-group-item list-group-item-action border-0"
+                    >
+                      <div class="d-flex w-100">
+                        <img
+                          src="../images/blog/blog-side-pic-1.png"
+                          class="me-3"
+                          alt="thumbnail"
+                        />
+                        <div>
+                          <small class="text-muted">Design Services</small>
+                          <h6 class="mb-1">What makes you beautiful with us</h6>
+                        </div>
+                      </div>
+                    </a>
+                    <a
+                      href="#"
+                      class="list-group-item list-group-item-action border-0"
+                    >
+                      <div class="d-flex w-100">
+                        <img
+                          src="../images/blog/blog-side-pic-2.png"
+                          class="me-3"
+                          alt="thumbnail"
+                        />
+                        <div>
+                          <small class="text-muted">Design Services</small>
+                          <h6 class="mb-1">What makes you beautiful with us</h6>
+                        </div>
+                      </div>
+                    </a>
+                    <a
+                      href="#"
+                      class="list-group-item list-group-item-action border-0"
+                    >
+                      <div class="d-flex w-100">
+                        <img
+                          src="../images/blog/blog-side-pic-3.png"
+                          class="me-3"
+                          alt="thumbnail"
+                        />
+                        <div>
+                          <small class="text-muted">Design Services</small>
+                          <h6 class="mb-1">What makes you beautiful with us</h6>
+                        </div>
+                      </div>
+                    </a>
+                    <a
+                      href="#"
+                      class="list-group-item list-group-item-action border-0"
+                    >
+                      <div class="d-flex w-100">
+                        <img
+                          src="../images/blog/blog-side-pic-4.png"
+                          class="me-3"
+                          alt="thumbnail"
+                        />
+                        <div>
+                          <small class="text-muted">Design Services</small>
+                          <h6 class="mb-1">What makes you beautiful with us</h6>
+                        </div>
+                      </div>
+                    </a>
+                    <a
+                      href="#"
+                      class="list-group-item list-group-item-action border-0"
+                    >
+                      <div class="d-flex w-100">
+                        <img
+                          src="../images/blog/blog-side-pic-5.png"
+                          class="me-3"
+                          alt="thumbnail"
+                        />
+                        <div>
+                          <small class="text-muted">Design Services</small>
+                          <h6 class="mb-1">What makes you beautiful with us</h6>
+                        </div>
+                      </div>
+                    </a>
+                    <!-- More latest posts items -->
+                  </div>
+
+                  <!-- Promo Banner -->
+                  <div class="my-5">
+                    <img
+                      src="../images/blog/Aside → Link → banner-blog.png.png"
+                      alt="banner"
+                      class="img-fluid"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Main Content Area -->
+            <div class="col-md-9">
+              <div class="row g-4">
+                <!-- T-shirt Designer Card -->
+                <div class="col-md-6">
+                  <div class="card border-0">
+                    <img
+                      src="../images/blog/blog-card-pic-1.png"
+                      class="card-img-top"
+                      alt="T-shirt design"
+                    />
+                    <div class="card-body">
+                      <span class="badge bg-light text-dark mb-2"
+                        >Design Services</span
+                      >
+                      <h5 class="card-title">
+                        Make yourself happy with our T-shirt customer designer
+                      </h5>
+                      <p class="card-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      </p>
+                      <button class="btn btn-success">Read More</button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- More Product Cards -->
+                <div class="col-md-6">
+                  <div class="card border-0">
+                    <img
+                      src="../images/blog/blog-card-pic-2.png"
+                      class="card-img-top"
+                      alt="T-shirt preview"
+                    />
+                    <div class="card-body">
+                      <span class="badge bg-light text-dark mb-2"
+                        >Print Company</span
+                      >
+                      <h5 class="card-title">
+                        Are you ready to make it awesome with us
+                      </h5>
+                      <p class="card-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      </p>
+                      <button class="btn btn-success">Read More</button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Yoga Image Cards -->
+                <div class="col-md-6">
+                  <div class="card border-0">
+                    <img
+                      src="../images/blog/blog-card-pic-3.png"
+                      class="card-img-top"
+                      alt="Yoga pose"
+                    />
+                    <div class="card-body">
+                      <span class="badge bg-light text-dark mb-2"
+                        >Print Company</span
+                      >
+                      <h5 class="card-title">
+                        The best custom T-shirt designer WordPress theme
+                      </h5>
+                      <p class="card-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      </p>
+                      <button class="btn btn-success">Read More</button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="card border-0">
+                    <img
+                      src="../images/blog/blog-card-pic-4.png"
+                      class="card-img-top"
+                      alt="Yoga pose"
+                    />
+                    <div class="card-body">
+                      <span class="badge bg-light text-dark mb-2"
+                        >Print Shop</span
+                      >
+                      <h5 class="card-title">We can make your work better</h5>
+                      <p class="card-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      </p>
+                      <button class="btn btn-success">Read More</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="container py-4">
+                <!-- Featured Post -->
+                <div class="card mb-4 border-0">
+                  <div class="row g-0">
+                    <div class="col-md-6">
+                      <img
+                        src="../images/blog/Link → blog-11.jpg.png"
+                        class="img-fluid rounded-start h-100 object-fit-cover"
+                        alt="Yoga poses"
+                      />
+                    </div>
+                    <div class="col-md-6">
+                      <div class="card-body">
+                        <div class="d-flex align-items-center mb-3">
+                          <img
+                            src="../images/blog/div.post-content-link.png"
+                            alt=" banner"
+                            class="img-fluid"
+                          />
+                        </div>
+
+                        <div class="d-flex align-items-center text-muted mb-3">
+                          <small>August 20, 2022</small>
+                          <small class="mx-2">—</small>
+                          <small>by admin</small>
+                        </div>
+
+                        <h5 class="card-title h4">
+                          How to make a T-shirt design online
+                        </h5>
+                        <p class="card-text">
+                          Nullam imperdiet, sem at fringilla lobortis, sem nibh
+                          fringilla nibh, idae gravida mi purus sit amet erat.
+                          Ut dictum nisi massa.Maecenas id justo rhoncus,
+                          volutpat nunc sit amet, facilisislum scelerisque...
+                        </p>
+                        <button class="btn btn-success px-4">Read More</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Secondary Post -->
+                <div class="card border-0">
+                  <div class="card-body">
+                    <div class="mb-2">
+                      <span class="text-success">Print Company</span>
+                    </div>
+                    <h5 class="card-title h4 mb-3">Let say it your way</h5>
+                    <div class="d-flex align-items-center text-muted mb-3">
+                      <small>August 20, 2022</small>
+                      <small class="mx-2">—</small>
+                      <small>by admin</small>
+                    </div>
+                    <p class="card-text text-muted">
+                      Nullam imperdiet, sem at fringilla lobortis, sem nibh
+                      fringilla nibh, idae gravida mi purus sit amet erat. Ut
+                      dictum nisi massa.Maecenas id justo rhoncus, volutpat nunc
+                      sit amet, facilisislum scelerisque...
+                    </p>
+                    <button class="btn btn-success px-4">Read More</button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Pagination -->
+              <nav class="mt-4">
+                <ul class="pagination justify-content-center">
+                  <li class="page-item active">
+                    <a
+                      class="page-link rounded-circle bg-dark border-0 fw-bolder"
+                      href="#"
+                      >1</a
+                    >
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link border-0 text-dark fw-bolder" href="#"
+                      >2</a
+                    >
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link border-0 text-dark fw-bolder" href="#"
+                      >3</a
+                    >
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link border-0 text-dark fw-bolder" href="#"
+                      >Next>></a
+                    >
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="py-5 bg-light">
+        <div class="container">
+          <div class="row gy-4">
+            <!-- Brand Column -->
+            <div class="col-lg-3">
+              <img src="../images/logo/logo-black.png" alt="logo" />
+              <p class="text-muted">hello@teespace.io</p>
+              <p class="text-muted">+02 036 038 3996</p>
+              <p class="text-muted">
+                3665 Paseo Place, Suite 0960<br />San Diego
+              </p>
+            </div>
+
+            <!-- Information -->
+            <div class="col-lg-3">
+              <h5 class="fw-bold mb-3">Information</h5>
+              <ul class="list-unstyled">
+                <li class="mb-2">
+                  <a href="#" class="text-decoration-none text-muted"
+                    >About Us</a
+                  >
+                </li>
+                <li class="mb-2">
+                  <a href="#" class="text-decoration-none text-muted"
+                    >Our Blog</a
+                  >
+                </li>
+                <li class="mb-2">
+                  <a href="#" class="text-decoration-none text-muted"
+                    >Start a Return</a
+                  >
+                </li>
+                <li class="mb-2">
+                  <a href="#" class="text-decoration-none text-muted"
+                    >Contact Us</a
+                  >
+                </li>
+                <li class="mb-2">
+                  <a href="#" class="text-decoration-none text-muted"
+                    >Shipping FAQs</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <!-- Useful Links -->
+            <div class="col-lg-3">
+              <h5 class="fw-bold mb-3">Useful Links</h5>
+              <ul class="list-unstyled">
+                <li class="mb-2">
+                  <a href="#" class="text-decoration-none text-muted"
+                    >My Account</a
+                  >
+                </li>
+                <li class="mb-2">
+                  <a href="#" class="text-decoration-none text-muted"
+                    >Shipping</a
+                  >
+                </li>
+                <li class="mb-2">
+                  <a href="#" class="text-decoration-none text-muted"
+                    >Contact & Support</a
+                  >
+                </li>
+                <li class="mb-2">
+                  <a href="#" class="text-decoration-none text-muted"
+                    >All Products</a
+                  >
+                </li>
+                <li class="mb-2">
+                  <a href="#" class="text-decoration-none text-muted"
+                    >Design Product</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <!-- Any Questions -->
+            <div class="col-lg-3">
+              <h5 class="fw-bold mb-3">Any questions</h5>
+              <p class="mb-2">hello@teespace.com</p>
+              <p class="text-muted mb-4">
+                Find answers to all of your questions
+              </p>
+              <div class="d-flex gap-3">
+                <a href="#" class="text-muted"
+                  ><i class="fab fa-twitter"></i
+                ></a>
+                <a href="#" class="text-muted"
+                  ><i class="fab fa-facebook"></i
+                ></a>
+                <a href="#" class="text-muted"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+                <a href="#" class="text-muted"
+                  ><i class="fab fa-youtube"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Payment Methods & Copyright -->
+          <div class="row mt-5 pt-4 border-top">
+            <div class="col-12 text-center">
+              <img
+                src="../images/service-details/footer-payment-method.png.png"
+                alt="American Express"
+                class="me-2"
+              />
+              <p class="text-muted mt-4">
+                © 2022 TeeSpace. All rights reserved.
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </main>
+    <script src="../js/bootstrap.bundle.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css"
+    />
+  </body>
+</html>
